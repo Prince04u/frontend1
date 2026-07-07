@@ -180,6 +180,7 @@ export default function RegisterForm() {
                 placeholder="Enter password"
                 minLength={6}
               />
+                  </div>
 
                      {/* Password Strength */}
 
