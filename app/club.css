@@ -2053,8 +2053,11 @@ a.club-banner-link{
     background:#0A0A0A;
 
     color:#fff;
-}
 
+    padding-bottom:40px;
+
+    box-sizing:border-box;
+}
 .auth-topbar{
 
     display:flex;
