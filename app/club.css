@@ -3350,31 +3350,22 @@ a.club-banner-link{
 
 .register-card{
 
-    margin-top:0;
+    margin-top:-14px;
+
+    position:relative;
+
+    z-index:5;
 
     padding:24px;
 
-    border-radius:0 0 26px 26px;
+    border-radius:26px;
 
-    background:
-        linear-gradient(
-            180deg,
-            #1c1b18 0%,
-            #171614 20%,
-            #141414 45%,
-            #101010 75%,
-            #0b0b0b 100%
-        );
+    background:#151515;
 
     border:1px solid rgba(255,215,80,.08);
 
-    border-top:none;
-
     box-shadow:
-        0 30px 60px rgba(0,0,0,.45),
-        inset 0 1px 0 rgba(255,215,80,.05);
-
-    overflow:hidden;
+        0 20px 50px rgba(0,0,0,.40);
 }
 /* ---------- TABS ---------- */
 
@@ -3428,10 +3419,15 @@ a.club-banner-link{
 
 /* ---------- FORM ---------- */
 
-.premium-form{
-    display:flex;
-    flex-direction:column;
-    gap:22px;
+.premium-form-section{
+
+    margin-top:0;
+
+    position:relative;
+
+    z-index:5;
+
+    padding:0 18px 40px;
 }
 
 /* ---------- FIELD ---------- */
@@ -3926,12 +3922,20 @@ a.club-banner-link{
 /* ---------- MOBILE ---------- */
 
 @media (max-width:768px){
+
 .premium-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:36px 20px 48px;
 
     background:
         radial-gradient(circle at top right,
         rgba(255,208,70,.18),
         transparent 45%),
+
         linear-gradient(
             180deg,
             #1b1a17 0%,
@@ -3939,15 +3943,40 @@ a.club-banner-link{
             #151515 100%
         );
 
-    border-radius:26px 26px 0 0;
+    border-radius:26px;
+
+    border:none;
+
+}
+
+.premium-form-section{
+
+    margin-top:-22px;
+
+    padding:0 18px 40px;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+.register-card{
+
+    border-radius:26px;
+
+    padding:24px;
+
+    background:#151515;
 
     border:1px solid rgba(255,215,80,.08);
 
-    border-bottom:none;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.40);
 
-    overflow:hidden;
 }
 
+}
     .premium-hero-content{
 
         flex-direction:row;
