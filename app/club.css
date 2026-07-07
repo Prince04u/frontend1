@@ -1095,24 +1095,13 @@ a.club-banner-link{
 }
 
 .club-category-icon-wrap{
-
     width:58px;
-
     height:58px;
-
-    border-radius:18px;
-
+    padding:8px;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    background:#1E1E1E;
-
-    border:1px solid rgba(255,255,255,.05);
-
-    transition:.25s ease;
+    overflow:hidden;
 }
 .club-category-icon{
     width:100%;
