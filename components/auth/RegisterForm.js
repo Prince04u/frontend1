@@ -12,7 +12,6 @@ import { register as registerRequest } from "@/lib/authApi";
 import { saveAuth } from "@/lib/auth";
 
 export default function RegisterForm() {
-
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -28,158 +27,137 @@ export default function RegisterForm() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-
     const ref = searchParams.get("ref");
 
     if (ref) {
-
-      setForm(prev => ({
+      setForm((prev) => ({
         ...prev,
         inviteCode: ref.trim().toUpperCase(),
       }));
-
     }
-
   }, [searchParams]);
 
   const handleChange = (e) => {
-
     const { name, value } = e.target;
 
-    setForm(prev => ({
+    setForm((prev) => ({
       ...prev,
       [name]: value,
     }));
-
   };
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
 
     setError("");
 
     if (form.password !== form.confirmPassword) {
-
       setError("Passwords do not match");
-
       return;
-
     }
 
     if (!agree) {
-
       setError("Please agree to Privacy Agreement");
-
       return;
-
     }
 
     setLoading(true);
 
     try {
-
       const response = await registerRequest({
-
         name: `Player${form.mobile.slice(-4) || "01"}`,
-
         mobile: form.mobile,
-
         password: form.password,
-
         referralCode:
           form.inviteCode.trim().toUpperCase() || undefined,
-
       });
 
       saveAuth(response.data);
-
       router.push("/");
-
     } catch (err) {
-
       setError(
         err.response?.data?.message ||
-        "Registration failed. Please try again."
+          "Registration failed. Please try again."
       );
-
     } finally {
-
       setLoading(false);
-
     }
-
   };
 
   return (
-
     <main className="auth-page">
 
-   <AuthTopBar />
+      <AuthTopBar />
 
-<section className="premium-hero">
+      <section className="premium-hero">
 
-  <div className="premium-hero-content">
+        <div className="premium-hero-content">
 
-    <div className="premium-left">
+          <div className="premium-left">
 
-      <h1 className="hero-title">
-        Create Your
-        <br />
-        Account
-      </h1>
+            <h1 className="hero-title">
+              Create Your
+              <br />
+              Account
+            </h1>
 
-      <p className="hero-subtitle">
-        Create your account by phone number or email
-      </p>
+            <p className="hero-subtitle">
+              Create your account by phone number or email
+            </p>
 
-    </div>
+          </div>
 
-    <div className="premium-right">
+          <div className="premium-right">
 
-      <img
-        src="/images/register-hero.png"
-        alt="Lucky Nova Bonus"
-        className="hero-image"
-      />
+            <img
+              src="/images/register-hero.png"
+              alt="Register"
+              className="hero-image"
+            />
 
-    </div>
+          </div>
 
-  </div>
+        </div>
 
-</section>
+      </section>
 
-<section className="premium-form-section">
+      <section className="premium-form-section">
 
-  <div className="register-card">
+        <div className="register-card">
 
-    <div className="register-tabs">
+          <div className="register-tabs">
 
-      <button
-        type="button"
-        className="active"
-      >
-        📱 Phone
-      </button>
+            <button
+              type="button"
+              className="active"
+            >
+              📱 Phone
+            </button>
 
-      <button
-        type="button"
-      >
-        ✉ Email
-      </button>
+            <button
+              type="button"
+            >
+              ✉ Email
+            </button>
 
-    </div>
+          </div>
 
-    {error && (
-      <div className="auth-error">
-        {error}
-      </div>
-    )}
+          {error && (
+            <div className="auth-error">
+              {error}
+            </div>
+          )}
 
-    <form
-      onSubmit={handleSubmit}
-      className="premium-form"
-    >
+          <form
+            onSubmit={handleSubmit}
+            className="premium-form"
+          >
+
+            <div className="premium-field">
+
+              <label htmlFor="mobile">
+                Phone Number
+              </label>
 
               <PhoneInput
                 value={form.mobile}
@@ -187,8 +165,6 @@ export default function RegisterForm() {
               />
 
             </div>
-
-            {/* Password */}
 
             <div className="premium-field">
 
@@ -205,32 +181,22 @@ export default function RegisterForm() {
                 minLength={6}
               />
 
-            </div>
-
-            {/* Strength */}
+                     {/* Password Strength */}
 
             <div className="password-strength">
-
               <span>Password Strength</span>
 
               <div className="strength-bars">
-
                 <span className={form.password.length >= 2 ? "active" : ""}></span>
-
                 <span className={form.password.length >= 4 ? "active" : ""}></span>
-
                 <span className={form.password.length >= 6 ? "active" : ""}></span>
-
                 <span className={form.password.length >= 8 ? "active" : ""}></span>
-
               </div>
-
             </div>
 
             {/* Confirm Password */}
 
             <div className="premium-field">
-
               <label htmlFor="confirmPassword">
                 Confirm Password
               </label>
@@ -243,16 +209,13 @@ export default function RegisterForm() {
                 placeholder="Confirm Password"
                 minLength={6}
               />
-
             </div>
 
-            {/* Invite */}
+            {/* Invite Code */}
 
             <div className="premium-field">
-
               <label htmlFor="inviteCode">
-                Invite Code
-                <small> (Optional)</small>
+                Invite Code <small>(Optional)</small>
               </label>
 
               <input
@@ -265,13 +228,11 @@ export default function RegisterForm() {
                 placeholder="Enter invite code"
                 autoComplete="off"
               />
-
             </div>
 
             {/* Privacy */}
 
             <label className="premium-check">
-
               <input
                 type="checkbox"
                 checked={agree}
@@ -279,9 +240,7 @@ export default function RegisterForm() {
               />
 
               <span>
-
                 I agree to the{" "}
-
                 <Link
                   href="/privacy"
                   target="_blank"
@@ -289,12 +248,10 @@ export default function RegisterForm() {
                 >
                   Privacy Agreement
                 </Link>
-
               </span>
-
             </label>
 
-            {/* Button */}
+            {/* Register Button */}
 
             <button
               className="premium-register-btn"
@@ -304,70 +261,42 @@ export default function RegisterForm() {
               {loading ? "Creating Account..." : "Create Account"}
             </button>
 
+            {/* Login */}
+
             <Link
               href="/login"
               className="premium-login-btn"
             >
               Already have an account?
               <strong> Login</strong>
-            </Link>          </form>
+            </Link>
+
+          </form>
 
           <div className="premium-features">
 
             <div className="feature-card">
-
-              <div className="feature-icon">
-                🛡
-              </div>
-
+              <div className="feature-icon">🛡</div>
               <h4>100% Secure</h4>
-
-              <p>
-                Your personal information is protected with advanced encryption.
-              </p>
-
+              <p>Your personal information is protected with advanced encryption.</p>
             </div>
 
             <div className="feature-card">
-
-              <div className="feature-icon">
-                ⚡
-              </div>
-
+              <div className="feature-icon">⚡</div>
               <h4>Fast Registration</h4>
-
-              <p>
-                Create your account in less than one minute.
-              </p>
-
+              <p>Create your account in less than one minute.</p>
             </div>
 
             <div className="feature-card">
-
-              <div className="feature-icon">
-                🎁
-              </div>
-
+              <div className="feature-icon">🎁</div>
               <h4>Daily Rewards</h4>
-
-              <p>
-                Enjoy welcome bonuses and exclusive member rewards.
-              </p>
-
+              <p>Enjoy welcome bonuses and exclusive member rewards.</p>
             </div>
 
             <div className="feature-card">
-
-              <div className="feature-icon">
-                🎧
-              </div>
-
+              <div className="feature-icon">🎧</div>
               <h4>24×7 Support</h4>
-
-              <p>
-                Our support team is available anytime you need help.
-              </p>
-
+              <p>Our support team is available anytime you need help.</p>
             </div>
 
           </div>
@@ -379,5 +308,4 @@ export default function RegisterForm() {
     </main>
 
   );
-
 }
