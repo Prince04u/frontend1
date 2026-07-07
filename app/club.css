@@ -2041,7 +2041,6 @@ a.club-banner-link{
 /* ==========================================
    AUTH PAGE
 ========================================== */
-
 .auth-page{
 
     min-height:100vh;
@@ -2050,13 +2049,15 @@ a.club-banner-link{
 
     margin:0 auto;
 
-    background:#0A0A0A;
-
     color:#fff;
 
     padding-bottom:40px;
 
     box-sizing:border-box;
+
+    background:
+        radial-gradient(circle at top right, rgba(255,215,80,.12), transparent 35%),
+        linear-gradient(180deg,#171511 0%,#111111 35%,#0d0d0d 100%);
 }
 .auth-topbar{
 
@@ -3314,13 +3315,13 @@ a.club-banner-link{
 
     padding:24px;
 
-    background:#151515;
+    background:rgba(20,20,20,.88);
 
-    border:1px solid
-    rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
 
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.35);
+    border:1px solid rgba(255,215,80,.08);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
 /* ---------- TABS ---------- */
