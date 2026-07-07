@@ -142,7 +142,7 @@ export default function RegisterForm() {
           ✉ Email
         </button>
 
-      </div> ye code kaha se leke kaha tk dalu
+      </div>
 
           {error && (
             <div className="auth-error">
@@ -272,14 +272,17 @@ export default function RegisterForm() {
 >
   Already have an account?
   <strong> Login</strong>
+</Link>
+
 </form>
 
-</div>
+    </div>
 
-</section>
+  </section>
 
 </div>
 
 </main>
+
   );
 }
