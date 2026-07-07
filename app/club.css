@@ -1101,10 +1101,11 @@ a.club-banner-link{
     align-items:center;
     justify-content:center;
 }
+
 .club-category-icon{
-    width:42px;
-    height:42px;
-    object-fit:contain;
+    width:58px;
+    height:58px;
+    object-fit:cover;   /* contain mat use karo */
     display:block;
 }
 .club-category-label{
