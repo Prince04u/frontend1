@@ -1327,13 +1327,14 @@
 /* TEXT BELOW IMAGE */
 
 .club-popular-card-info{
+    display:flex;
+    flex-direction:column;
     padding:14px 14px 16px;
-}
-
     background:#161616;
 }
-
 .club-popular-card-info strong{
+    display:block;
+    margin:0;
     font-size:16px;
     font-weight:800;
     color:#fff;
@@ -1341,7 +1342,8 @@
 }
 
 .club-popular-card-info span{
-    margin-top:3px;
+    display:block;
+    margin-top:4px;
     font-size:12px;
     color:#9f9f9f;
     font-weight:500;
