@@ -277,10 +277,6 @@ export default function RegisterForm() {
 </div>
 
 </section>
-
 </main>
-
-);
-}
   );
 }
