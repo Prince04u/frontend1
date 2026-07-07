@@ -1,13 +1,13 @@
 "use client";
 
 const CATEGORIES = [
-  { id: "all", label: "All Games", icon: "🍀" },
-  { id: "popular", label: "Popular", icon: "🔥" },
-  { id: "lottery", label: "Lottery", icon: "🎱" },
-  { id: "slots", label: "Slots", icon: "🎰" },
-  { id: "live", label: "Live Casino", icon: "🎩" },
-  { id: "sports", label: "Sports", icon: "⚽" },
-  { id: "mini", label: "Mini Games", icon: "🎮" },
+  { id: "all", label: "All Games", icon: "/icons/all-games.png" },
+  { id: "popular", label: "Popular", icon: "/icons/popular.png" },
+  { id: "lottery", label: "Lottery", icon: "/icons/lottery.png" },
+  { id: "slots", label: "Slots", icon: "/icons/slots.png" },
+  { id: "live", label: "Live Casino", icon: "/icons/live-casino.png" },
+  { id: "sports", label: "Sports", icon: "/icons/sports.png" },
+  { id: "mini", label: "Mini Games", icon: "/icons/mini-games.png" },
 ];
 
 export default function CategoryTabs({ active, onChange }) {
@@ -21,11 +21,16 @@ export default function CategoryTabs({ active, onChange }) {
           onClick={() => onChange(cat.id)}
         >
           <span className="club-category-icon-wrap">
-            <span className="club-category-icon" aria-hidden="true">
-              {cat.icon}
-            </span>
+            <img
+              src={cat.icon}
+              alt={cat.label}
+              className="club-category-icon"
+            />
           </span>
-          <span className="club-category-label">{cat.label}</span>
+
+          <span className="club-category-label">
+            {cat.label}
+          </span>
         </button>
       ))}
     </div>
