@@ -1261,7 +1261,6 @@
     transform:translateY(-50%) scale(1.05);
 }
 
-
 /* ==========================================================
    POPULAR CARD
 ========================================================== */
@@ -1271,6 +1270,10 @@
     position:relative;
 
     flex:0 0 165px;
+
+    display:flex;
+
+    flex-direction:column;
 
     overflow:hidden;
 
@@ -1282,7 +1285,7 @@
 
     text-decoration:none;
 
-    transition:.30s;
+    transition:all .30s ease;
 
     box-shadow:
         0 10px 24px rgba(0,0,0,.22);
@@ -1308,7 +1311,49 @@
     opacity:.92;
 }
 
+/* IMAGE */
 
+.club-popular-card-media{
+
+    position:relative;
+
+    aspect-ratio:3/4;
+
+    overflow:hidden;
+
+    background:#111;
+}
+
+/* TEXT BELOW IMAGE */
+
+.club-popular-card-info{
+
+    padding:10px 12px 12px;
+
+    background:#161616;
+}
+
+.club-popular-card-info strong{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.club-popular-card-info span{
+
+    display:block;
+
+    color:#9d9d9d;
+
+    font-size:12px;
+}
 /* ==========================================================
    POPULAR IMAGE
 ========================================================== */
@@ -1356,51 +1401,6 @@
     font-size:44px;
 }
 
-
-/* ==========================================================
-   POPULAR META
-========================================================== */
-
-.club-popular-card-meta{
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    bottom:0;
-
-    padding:14px 12px;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.90),
-            rgba(0,0,0,.55),
-            transparent
-        );
-}
-
-.club-popular-card-meta strong{
-
-    display:block;
-
-    margin-bottom:4px;
-
-    color:#FFF;
-
-    font-size:15px;
-
-    font-weight:700;
-}
-
-.club-popular-card-meta span{
-
-    color:#C6C6C6;
-
-    font-size:12px;
-}
 
 
 /* ==========================================================
