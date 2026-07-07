@@ -264,49 +264,23 @@ export default function RegisterForm() {
 
             {/* Login */}
 
-            <Link
-              href="/login"
-              className="premium-login-btn"
-            >
-              Already have an account?
-              <strong> Login</strong>
-            </Link>
+           <Link
+  href="/login"
+  className="premium-login-btn"
+>
+  Already have an account?
+  <strong> Login</strong>
+</Link>
 
-          </form>
+</form>
 
-          <div className="premium-features">
+</div>
 
-            <div className="feature-card">
-              <div className="feature-icon">🛡</div>
-              <h4>100% Secure</h4>
-              <p>Your personal information is protected with advanced encryption.</p>
-            </div>
+</section>
 
-            <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h4>Fast Registration</h4>
-              <p>Create your account in less than one minute.</p>
-            </div>
+</main>
 
-            <div className="feature-card">
-              <div className="feature-icon">🎁</div>
-              <h4>Daily Rewards</h4>
-              <p>Enjoy welcome bonuses and exclusive member rewards.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon">🎧</div>
-              <h4>24×7 Support</h4>
-              <p>Our support team is available anytime you need help.</p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-    </main>
-
+);
+}
   );
 }
