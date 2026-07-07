@@ -1114,16 +1114,12 @@ a.club-banner-link{
 
     transition:.25s ease;
 }
-
 .club-category-icon{
-    width:24px;
-    height:24px;
+    width:100%;
+    height:100%;
     object-fit:contain;
     display:block;
-    user-select:none;
-    pointer-events:none;
 }
-
 .club-category-label{
 
     font-size:12px;
