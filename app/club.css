@@ -2229,7 +2229,139 @@ a.club-banner-link{
 
     color:#D8D8D8;
 }
+/* ===========================
+   HERO LAYOUT
+=========================== */
 
+.auth-banner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:22px;
+}
+
+.auth-banner-content{
+    flex:1;
+    position:relative;
+    z-index:5;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:linear-gradient(90deg,#FFD54A,#D4AF37);
+
+    color:#111;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+}
+
+.hero-stats{
+    display:flex;
+    gap:12px;
+    margin-top:26px;
+}
+
+.hero-stat{
+
+    flex:1;
+
+    padding:12px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    backdrop-filter:blur(10px);
+
+    text-align:center;
+}
+
+.hero-stat strong{
+
+    display:block;
+
+    font-size:18px;
+
+    color:#FFD54A;
+}
+
+.hero-stat span{
+
+    font-size:11px;
+
+    color:#BEBEBE;
+}
+
+.hero-card{
+
+    width:180px;
+
+    padding:22px;
+
+    border-radius:22px;
+
+    background:linear-gradient(180deg,#232323,#141414);
+
+    border:1px solid rgba(255,215,80,.15);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35);
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:5;
+}
+
+.hero-card-top{
+
+    font-size:42px;
+
+    margin-bottom:12px;
+}
+
+.hero-card-title{
+
+    color:#BFBFBF;
+
+    font-size:13px;
+}
+
+.hero-card-amount{
+
+    margin:12px 0;
+
+    font-size:34px;
+
+    font-weight:900;
+
+    color:#FFD54A;
+}
+
+.hero-card-text{
+
+    font-size:12px;
+
+    color:#9F9F9F;
+
+    line-height:1.6;
+}
 .auth-body{
 
     padding:24px;
