@@ -87,60 +87,62 @@ export default function RegisterForm() {
   return (
     <main className="auth-page">
 
-      <AuthTopBar />
+     <AuthTopBar />
 
-      <section className="premium-hero">
+<div className="register-wrapper">
 
-        <div className="premium-hero-content">
+  <section className="premium-hero">
 
-          <div className="premium-left">
+    <div className="premium-hero-content">
 
-            <h1 className="hero-title">
-              Create Your
-              <br />
-              Account
-            </h1>
+      <div className="premium-left">
 
-            <p className="hero-subtitle">
-              Create your account by phone number or email
-            </p>
+        <h1 className="hero-title">
+          Create Your
+          <br />
+          Account
+        </h1>
 
-          </div>
+        <p className="hero-subtitle">
+          Create your account by phone number or email
+        </p>
 
-          <div className="premium-right">
+      </div>
 
-            <img
-              src="/images/register-hero.png"
-              alt="Register"
-              className="hero-image"
-            />
+      <div className="premium-right">
 
-          </div>
+        <img
+          src="/images/register-hero.png"
+          alt="Register"
+          className="hero-image"
+        />
 
-        </div>
+      </div>
 
-      </section>
+    </div>
 
-      <section className="premium-form-section">
+  </section>
 
-        <div className="register-card">
+  <section className="premium-form-section">
 
-          <div className="register-tabs">
+    <div className="register-card">
 
-            <button
-              type="button"
-              className="active"
-            >
-              📱 Phone
-            </button>
+      <div className="register-tabs">
 
-            <button
-              type="button"
-            >
-              ✉ Email
-            </button>
+        <button
+          type="button"
+          className="active"
+        >
+          📱 Phone
+        </button>
 
-          </div>
+        <button
+          type="button"
+        >
+          ✉ Email
+        </button>
+
+      </div> ye code kaha se leke kaha tk dalu
 
           {error && (
             <div className="auth-error">
@@ -270,13 +272,14 @@ export default function RegisterForm() {
 >
   Already have an account?
   <strong> Login</strong>
-</Link>
-
 </form>
 
 </div>
 
 </section>
+
+</div>
+
 </main>
   );
 }
