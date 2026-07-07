@@ -2139,35 +2139,95 @@ a.club-banner-link{
     cursor:pointer;
 }
 
+/* ==========================================
+   PREMIUM AUTH BANNER
+========================================== */
+
 .auth-banner{
+    position:relative;
+    overflow:hidden;
 
-    padding:32px 24px;
+    padding:48px 24px 100px;
 
-    background:#141414;
+    background:
+        radial-gradient(circle at top right, rgba(255,215,80,.22), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(255,180,40,.08), transparent 45%),
+        linear-gradient(135deg,#1B1B1B 0%,#111111 55%,#090909 100%);
 
-    border-bottom:1px solid rgba(255,255,255,.06);
+    border-bottom:1px solid rgba(255,215,80,.08);
+}
+
+/* Large Gold Glow */
+
+.auth-banner::before{
+    content:"";
+    position:absolute;
+
+    top:-120px;
+    right:-90px;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,215,80,.22);
+
+    filter:blur(90px);
+}
+
+/* Bottom Glow */
+
+.auth-banner::after{
+    content:"";
+    position:absolute;
+
+    left:-80px;
+    bottom:-120px;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(255,180,40,.10);
+
+    filter:blur(75px);
 }
 
 .auth-banner h1{
+    position:relative;
+    z-index:2;
 
-    font-size:32px;
+    margin:0 0 14px;
 
-    font-weight:800;
+    font-size:42px;
+
+    font-weight:900;
+
+    line-height:1;
 
     color:#fff;
 
-    margin-bottom:8px;
+    letter-spacing:-1px;
+
+    text-shadow:
+        0 4px 16px rgba(255,215,80,.15);
 }
 
 .auth-banner p{
+    position:relative;
+    z-index:2;
 
-    font-size:14px;
+    max-width:300px;
 
-    line-height:1.7;
+    margin:0;
 
-    color:#B7B7B7;
+    font-size:15px;
 
-    max-width:340px;
+    line-height:1.8;
+
+    color:#D8D8D8;
 }
 
 .auth-body{
