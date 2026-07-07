@@ -3068,7 +3068,9 @@ a.club-banner-link{
 
     align-items:center;
 
-    gap:22px;
+    justify-content:space-between;
+
+    gap:20px;
 }
 
 .premium-left{
@@ -3168,9 +3170,31 @@ a.club-banner-link{
 
 .premium-right{
 
-    width:180px;
+    flex:1;
 
-    flex-shrink:0;
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+}
+.hero-image{
+
+    width:100%;
+
+    max-width:280px;
+
+    height:auto;
+
+    display:block;
+
+    object-fit:contain;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    filter:drop-shadow(0 15px 35px rgba(255,190,50,.35));
 }
 
 .bonus-card{
@@ -3847,26 +3871,57 @@ a.club-banner-link{
 
 @media (max-width:768px){
 
+    .premium-hero{
+
+        padding:28px 18px;
+    }
+
     .premium-hero-content{
 
-        flex-direction:column;
+        flex-direction:row;
 
-        align-items:flex-start;
+        align-items:center;
+
+        justify-content:space-between;
+
+        gap:16px;
+    }
+
+    .premium-left{
+
+        flex:1;
     }
 
     .premium-right{
 
-        width:100%;
+        flex:1;
+
+        display:flex;
+
+        justify-content:flex-end;
+
+        align-items:center;
     }
 
-    .bonus-card{
+    .hero-image{
 
         width:100%;
+
+        max-width:220px;
+
+        height:auto;
+
+        object-fit:contain;
     }
 
     .hero-title{
 
-        font-size:34px;
+        font-size:30px;
+    }
+
+    .hero-subtitle{
+
+        font-size:14px;
     }
 
     .premium-features{
@@ -3880,29 +3935,56 @@ a.club-banner-link{
 
     .premium-hero{
 
-        padding:28px 16px;
+        padding:22px 16px;
+    }
+
+    .premium-hero-content{
+
+        flex-direction:row;
+
+        align-items:center;
+
+        gap:12px;
+    }
+
+    .premium-left{
+
+        flex:1;
+    }
+
+    .premium-right{
+
+        flex:1;
+
+        display:flex;
+
+        justify-content:flex-end;
+    }
+
+    .hero-image{
+
+        max-width:170px;
+
+        width:100%;
+    }
+
+    .hero-title{
+
+        font-size:28px;
+
+        line-height:1.05;
+    }
+
+    .hero-subtitle{
+
+        font-size:13px;
+
+        line-height:1.6;
     }
 
     .register-card{
 
         padding:18px;
-    }
-
-    .hero-title{
-
-        font-size:30px;
-    }
-
-    .hero-subtitle{
-
-        font-size:14px;
-    }
-
-    .hero-features{
-
-        display:grid;
-
-        grid-template-columns:1fr;
     }
 
     .register-tabs{
@@ -3928,7 +4010,6 @@ a.club-banner-link{
     }
 
 }
-
 /* ---------- SCROLLBAR ---------- */
 
 ::-webkit-scrollbar{
