@@ -115,80 +115,71 @@ export default function RegisterForm() {
 
     <main className="auth-page">
 
-      <AuthTopBar />
+   <AuthTopBar />
 
-      <section className="premium-hero">        <div className="premium-hero-content">
+<section className="premium-hero">
 
-           <div className="premium-left">
+  <div className="premium-hero-content">
 
-  <h1 className="hero-title">
-    Create Your
-    <br />
-    Account
-  </h1>
+    <div className="premium-left">
 
-  <p className="hero-subtitle">
-    Create your account by phone number or email
-  </p>
+      <h1 className="hero-title">
+        Create Your
+        <br />
+        Account
+      </h1>
 
-</div>
+      <p className="hero-subtitle">
+        Create your account by phone number or email
+      </p>
 
-<div className="premium-right">
+    </div>
 
-  <img
-    src="/images/register-hero.png"
-    alt="Lucky Nova Bonus"
-    className="hero-image"
-  />
+    <div className="premium-right">
 
-</div>
-            </div>
+      <img
+        src="/images/register-hero.png"
+        alt="Lucky Nova Bonus"
+        className="hero-image"
+      />
 
-          </div>
+    </div>
 
-        </div>
+  </div>
 
-      </section>
+</section>
 
-      <section className="premium-form-section">
+<section className="premium-form-section">
 
-        <div className="register-card">
+  <div className="register-card">
 
-          <div className="register-tabs">
+    <div className="register-tabs">
 
-            <button
-              type="button"
-              className="active"
-            >
-              📱 Phone
-            </button>
+      <button
+        type="button"
+        className="active"
+      >
+        📱 Phone
+      </button>
 
-            <button
-              type="button"
-            >
-              ✉ Email
-            </button>
+      <button
+        type="button"
+      >
+        ✉ Email
+      </button>
 
-          </div>
+    </div>
 
-          {error && (
+    {error && (
+      <div className="auth-error">
+        {error}
+      </div>
+    )}
 
-            <div className="auth-error">
-              {error}
-            </div>
-
-          )}
-
-          <form
-            onSubmit={handleSubmit}
-            className="premium-form"
-          >            {/* Phone */}
-
-            <div className="premium-field">
-
-              <label htmlFor="mobile">
-                Phone Number
-              </label>
+    <form
+      onSubmit={handleSubmit}
+      className="premium-form"
+    >
 
               <PhoneInput
                 value={form.mobile}
