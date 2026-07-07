@@ -1327,57 +1327,43 @@
 /* TEXT BELOW IMAGE */
 
 .club-popular-card-info{
-
-    padding:10px 12px 12px;
+    padding:14px 14px 16px;
+}
 
     background:#161616;
 }
 
 .club-popular-card-info strong{
-
-    display:block;
-
-    margin-bottom:4px;
-
+    font-size:16px;
+    font-weight:800;
     color:#fff;
-
-    font-size:15px;
-
-    font-weight:700;
+    line-height:1.2;
 }
 
 .club-popular-card-info span{
-
-    display:block;
-
-    color:#9d9d9d;
-
+    margin-top:3px;
     font-size:12px;
+    color:#9f9f9f;
+    font-weight:500;
 }
 /* ==========================================================
    POPULAR IMAGE
 ========================================================== */
 
 .club-popular-card-media{
-
     position:relative;
-
+    width:100%;
     aspect-ratio:3/4;
-
     overflow:hidden;
-
     background:#101010;
 }
 
 .club-popular-card-img{
-
+    position:absolute;
+    inset:0;
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
-    transition:transform .45s ease;
 }
 
 .club-popular-card:hover
