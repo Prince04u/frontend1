@@ -3300,7 +3300,7 @@ a.club-banner-link{
 
 .premium-form-section{
 
-    margin-top:-28px;
+    margin-top:-14px;
 
     position:relative;
 
@@ -3311,8 +3311,10 @@ a.club-banner-link{
 
 .register-card{
 
-    border-radius:26px;
+    border-radius:0 0 26px 26px;
 
+    margin-top:-2px;
+  
     padding:24px;
 
     background:rgba(20,20,20,.88);
@@ -3876,6 +3878,8 @@ a.club-banner-link{
 @media (max-width:768px){
 
     .premium-hero{
+      border-radius:26px 26px 0 0;
+overflow:hidden;
 
         padding:28px 18px;
     }
