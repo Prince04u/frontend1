@@ -1,168 +1,151 @@
-.club-app {
-  min-height: 100vh;
-  max-width: 480px;
-  margin: 0 auto;
-  padding-bottom: 90px;
-  position: relative;
-  overflow-x: hidden;
+/* ==========================================================
+   APP
+========================================================== */
 
-  background: #050505;
-  color: #ffffff;
+.club-app{
+    position:relative;
+    min-height:100vh;
+    max-width:480px;
+    margin:0 auto;
+    padding-bottom:90px;
+    overflow-x:hidden;
 
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:#050505;
+    color:#fff;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 }
 
-.club-app::before {
-  display: none;
+.club-app::before{
+    display:none;
 }
 
-.club-app>*:not(.club-bottom-nav) {
-  position: relative;
-  z-index: 2;
+.club-app>*:not(.club-bottom-nav){
+    position:relative;
+    z-index:2;
 }
 
-/* ==========================
+
+/* ==========================================================
    HEADER
-========================== */
+========================================================== */
 
-.club-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.club-header{
 
-  padding: 18px 18px 14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-  background: #0f0f10;
+    padding:18px;
 
-  border-bottom: 1px solid rgba(255,255,255,.05);
+    margin-bottom:16px;
 
-  margin-bottom: 14px;
+    background:#101010;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-/* ==========================
+
+/* ==========================================================
    LOGO
-========================== */
+========================================================== */
 
-.club-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.club-logo{
 
-  text-decoration: none;
+    display:flex;
+    align-items:center;
+    gap:12px;
 
-  transition: .25s ease;
+    text-decoration:none;
+
+    transition:.25s;
 }
 
 .club-logo:hover{
-  opacity:.95;
-}
 
-.club-logo-text{
-  display:flex;
-  flex-direction:column;
-  line-height:1;
-}
-
-.club-logo-win{
-
-  font-size:26px;
-
-  font-weight:800;
-
-  color:#fff;
-
-  letter-spacing:.3px;
-
-  text-shadow:none;
-}
-
-.club-logo-club{
-
-  margin-top:4px;
-
-  color:#D4AF37;
-
-  font-size:11px;
-
-  font-weight:700;
-
-  letter-spacing:2px;
-
-  text-transform:uppercase;
-
-  text-shadow:none;
+    opacity:.96;
 }
 
 .club-logo-icon{
 
-  width:44px;
+    width:44px;
+    height:44px;
 
-  height:44px;
+    border-radius:14px;
 
-  border-radius:14px;
+    object-fit:cover;
 
-  object-fit:cover;
-
-  filter:none;
+    flex-shrink:0;
 }
 
-.club-header-actions{
+.club-logo-text{
 
-  display:flex;
-
-  align-items:center;
-
-  gap:10px;
-}.club-logo-text{
     display:flex;
     flex-direction:column;
     justify-content:center;
+
     line-height:1;
 }
 
 .club-logo-win{
-    font-size:24px;
+
+    font-size:25px;
+
     font-weight:800;
-    color:#ffffff;
-    letter-spacing:.4px;
-    text-shadow:none;
+
+    color:#fff;
+
+    letter-spacing:.35px;
 }
 
 .club-logo-club{
-    margin-top:3px;
+
+    margin-top:4px;
+
     font-size:11px;
+
     font-weight:700;
+
     color:#D4AF37;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
-    text-shadow:none;
+
     opacity:.95;
 }
 
-.club-logo-icon{
-    width:42px;
-    height:42px;
-    border-radius:12px;
-    object-fit:cover;
-    flex-shrink:0;
-    filter:none;
-}
+
+/* ==========================================================
+   HEADER ACTIONS
+========================================================== */
 
 .club-header-actions{
+
     display:flex;
     align-items:center;
     gap:10px;
 }
 
-/* Wallet Button */
+
+/* ==========================================================
+   WALLET BUTTON
+========================================================== */
 
 .club-btn-wallet{
+
     display:flex;
     align-items:center;
     justify-content:center;
     gap:8px;
 
     height:42px;
+
     padding:0 16px;
 
     border-radius:14px;
@@ -171,25 +154,24 @@
 
     border:1px solid rgba(255,255,255,.06);
 
-    color:#ffffff;
+    color:#fff;
 
     font-size:13px;
+
     font-weight:700;
 
     text-decoration:none;
 
-    transition:all .25s ease;
-
-    box-shadow:none;
+    transition:.25s;
 }
 
 .club-btn-wallet:hover{
 
-    background:#232323;
+    background:#242424;
 
     border-color:#D4AF37;
 
-    transform:translateY(-1px);
+    transform:translateY(-2px);
 }
 
 .club-btn-wallet:active{
@@ -202,9 +184,15 @@
     font-size:17px;
 
     color:#D4AF37;
+}
 
-    filter:none;
-}.club-btn-outline{
+
+/* ==========================================================
+   OUTLINE BUTTON
+========================================================== */
+
+.club-btn-outline{
+
     display:flex;
     align-items:center;
     justify-content:center;
@@ -219,7 +207,7 @@
 
     background:#181818;
 
-    color:#ffffff;
+    color:#fff;
 
     font-size:13px;
 
@@ -227,9 +215,7 @@
 
     text-decoration:none;
 
-    transition:all .25s ease;
-
-    box-shadow:none;
+    transition:.25s;
 }
 
 .club-btn-outline:hover{
@@ -238,7 +224,7 @@
 
     border-color:#D4AF37;
 
-    transform:translateY(-1px);
+    transform:translateY(-2px);
 }
 
 .club-btn-outline:active{
@@ -246,25 +232,30 @@
     transform:scale(.98);
 }
 
+
+/* ==========================================================
+   PRIMARY BUTTON
+========================================================== */
+
 .club-btn-gradient{
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     height:42px;
 
     padding:0 18px;
 
-    border:none;
-
     border-radius:14px;
 
-    background:#D4AF37;
+    background:linear-gradient(
+        180deg,
+        #F3D46A 0%,
+        #D4AF37 100%
+    );
 
-    color:#111111;
+    color:#111;
 
     font-size:13px;
 
@@ -272,16 +263,14 @@
 
     text-decoration:none;
 
-    transition:all .25s ease;
-
-    box-shadow:none;
+    transition:.25s;
 }
 
 .club-btn-gradient:hover{
 
-    background:#E4C560;
+    transform:translateY(-2px);
 
-    transform:translateY(-1px);
+    filter:brightness(1.05);
 }
 
 .club-btn-gradient:active{
@@ -289,9 +278,10 @@
     transform:scale(.98);
 }
 
-/* ===========================
-   BANNER
-=========================== */
+
+/* ==========================================================
+   BANNER WRAPPER
+========================================================== */
 
 .club-banner-wrap{
 
@@ -299,6 +289,9 @@
 
     margin-bottom:18px;
 }
+/* ==========================================================
+   BANNER
+========================================================== */
 
 .club-banner{
 
@@ -308,14 +301,24 @@
 
     border-radius:22px;
 
-    min-height:185px;
-
     background:#141414;
+
+    min-height:185px;
 
     border:1px solid rgba(212,175,55,.14);
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.30);
+        0 12px 32px rgba(0,0,0,.32);
+
+    transition:.35s ease;
+}
+
+.club-banner:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.38);
 }
 
 .club-banner-has-image{
@@ -325,68 +328,91 @@
     min-height:0;
 
     border:none;
-}.club-banner-img{
+}
+
+.club-banner-img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
     object-position:center;
+
     transition:transform .45s ease;
 }
 
 .club-banner:hover .club-banner-img{
-    transform:scale(1.03);
+
+    transform:scale(1.04);
 }
 
 .club-banner-sr{
+
     position:absolute;
+
     width:1px;
     height:1px;
-    padding:0;
+
     margin:-1px;
+
     overflow:hidden;
+
     clip:rect(0,0,0,0);
+
     white-space:nowrap;
-    border:0;
 }
 
 a.club-banner-link{
+
     display:block;
+
     width:100%;
     height:100%;
+
     color:inherit;
+
     text-decoration:none;
 }
 
 .club-banner-content{
 
     position:relative;
+
     z-index:2;
 
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
 
     min-height:185px;
 
     padding:24px;
 
-    background:linear-gradient(
-        90deg,
-        rgba(10,10,10,.88) 0%,
-        rgba(10,10,10,.55) 45%,
-        rgba(10,10,10,.15) 100%
-    );
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,8,8,.90) 0%,
+            rgba(8,8,8,.55) 48%,
+            rgba(8,8,8,.08) 100%
+        );
 }
 
 .club-banner-badge{
 
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
 
     width:max-content;
 
     padding:7px 14px;
+
+    margin-bottom:14px;
 
     border-radius:999px;
 
@@ -401,45 +427,41 @@ a.club-banner-link{
     letter-spacing:1px;
 
     text-transform:uppercase;
-
-    margin-bottom:12px;
 }
 
 .club-banner-amount{
 
-    font-size:46px;
+    margin-bottom:8px;
 
-    line-height:1;
+    font-size:46px;
 
     font-weight:900;
 
-    color:#ffffff;
+    line-height:1;
 
-    margin-bottom:8px;
-
-    text-shadow:none;
+    color:#fff;
 }
 
 .club-banner-title{
 
+    max-width:240px;
+
     font-size:18px;
+
+    line-height:1.45;
 
     font-weight:700;
 
-    color:#d8d8d8;
+    color:#DDDDDD;
+}
 
-    letter-spacing:.4px;
-
-    line-height:1.4;
-
-    max-width:230px;
-}.club-banner-coins{
+.club-banner-coins{
 
     position:absolute;
 
-    right:18px;
-
     top:50%;
+
+    right:20px;
 
     transform:translateY(-50%);
 
@@ -457,18 +479,14 @@ a.club-banner-link{
     position:absolute;
 
     left:0;
-
     right:0;
-
     bottom:14px;
 
-    z-index:3;
+    z-index:5;
 
     display:flex;
 
     justify-content:center;
-
-    align-items:center;
 
     gap:8px;
 }
@@ -481,9 +499,9 @@ a.club-banner-link{
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.20);
+    background:rgba(255,255,255,.22);
 
-    transition:all .25s ease;
+    transition:.25s;
 }
 
 .club-banner-dots span.active{
@@ -493,13 +511,12 @@ a.club-banner-link{
     border-radius:999px;
 
     background:#D4AF37;
-
-    box-shadow:none;
 }
 
-/* ======================================
+
+/* ==========================================================
    ANNOUNCEMENT
-====================================== */
+========================================================== */
 
 .club-announce{
 
@@ -513,18 +530,23 @@ a.club-banner-link{
 
     padding:14px 16px;
 
-    background:#161616;
-
     border-radius:16px;
+
+    background:#161616;
 
     border:1px solid rgba(255,255,255,.06);
 
-    overflow:hidden;
-
-    box-shadow:0 8px 24px rgba(0,0,0,.22);
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.22);
 }
 
 .club-announce-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     flex-shrink:0;
 
@@ -538,35 +560,29 @@ a.club-banner-link{
 
     color:#111;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
     font-size:18px;
 
     font-weight:700;
-}.club-marquee{
+}
+
+.club-marquee{
 
     flex:1;
 
     overflow:hidden;
 
     white-space:nowrap;
-
-    position:relative;
 }
 
 .club-marquee span{
 
     display:inline-block;
 
+    color:#D8D8D8;
+
     font-size:13px;
 
     font-weight:500;
-
-    color:#D8D8D8;
 
     animation:club-marquee 20s linear infinite;
 
@@ -575,18 +591,18 @@ a.club-banner-link{
 
 @keyframes club-marquee{
 
-    0%{
+    from{
+
         transform:translateX(100%);
     }
 
-    100%{
+    to{
+
         transform:translateX(-120%);
     }
 }
 
 .club-announce-detail{
-
-    flex-shrink:0;
 
     display:flex;
 
@@ -594,11 +610,11 @@ a.club-banner-link{
 
     justify-content:center;
 
+    flex-shrink:0;
+
     height:36px;
 
     padding:0 16px;
-
-    border:none;
 
     border-radius:12px;
 
@@ -612,18 +628,30 @@ a.club-banner-link{
 
     text-decoration:none;
 
-    cursor:pointer;
-
-    transition:all .25s ease;
-
-    box-shadow:none;
+    transition:.25s;
 }
+
+.club-announce-detail:hover{
+
+    filter:brightness(1.05);
+
+    transform:translateY(-1px);
+}
+
+.club-announce-detail:active{
+
+    transform:scale(.98);
+}
+
+/* ==========================================================
+   ANNOUNCEMENT STATES
+========================================================== */
 
 .club-announce-detail:hover{
 
     background:#E6C65A;
 
-    transform:translateY(-1px);
+    transform:translateY(-2px);
 }
 
 .club-announce-detail:active{
@@ -647,20 +675,25 @@ a.club-banner-link{
 
     cursor:pointer;
 
-    transition:all .2s ease;
+    transition:.25s;
 }
 
 .club-announce[role="button"]:hover{
 
-    border-color:rgba(212,175,55,.28);
+    border-color:rgba(212,175,55,.30);
+
+    transform:translateY(-1px);
 }
 
 .club-announce[role="button"]:active{
 
     transform:scale(.995);
-}/* ==========================
+}
+
+
+/* ==========================================================
    ANNOUNCEMENT MODAL
-========================== */
+========================================================== */
 
 .club-announce-modal-overlay{
 
@@ -682,16 +715,18 @@ a.club-banner-link{
 
     backdrop-filter:blur(8px);
 
-    animation:club-announce-modal-fade .25s ease;
+    animation:clubAnnounceFade .25s ease;
 }
 
-@keyframes club-announce-modal-fade{
+@keyframes clubAnnounceFade{
 
     from{
+
         opacity:0;
     }
 
     to{
+
         opacity:1;
     }
 }
@@ -719,10 +754,10 @@ a.club-banner-link{
     box-shadow:
         0 18px 50px rgba(0,0,0,.45);
 
-    animation:club-announce-modal-pop .28s ease;
+    animation:clubAnnouncePop .28s ease;
 }
 
-@keyframes club-announce-modal-pop{
+@keyframes clubAnnouncePop{
 
     from{
 
@@ -760,7 +795,7 @@ a.club-banner-link{
 
     height:48px;
 
-    border-radius:14px;
+    flex-shrink:0;
 
     display:flex;
 
@@ -768,7 +803,7 @@ a.club-banner-link{
 
     justify-content:center;
 
-    flex-shrink:0;
+    border-radius:14px;
 
     background:#D4AF37;
 
@@ -777,9 +812,9 @@ a.club-banner-link{
     font-size:20px;
 
     font-weight:700;
+}
 
-    border:none;
-}.club-announce-modal-kicker{
+.club-announce-modal-kicker{
 
     margin:0;
 
@@ -802,9 +837,9 @@ a.club-banner-link{
 
     font-weight:800;
 
-    color:#ffffff;
-
     line-height:1.3;
+
+    color:#fff;
 }
 
 .club-announce-modal-close{
@@ -815,23 +850,23 @@ a.club-banner-link{
 
     height:38px;
 
-    border:none;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     border-radius:12px;
 
     background:#242424;
 
-    color:#d6d6d6;
+    color:#D6D6D6;
 
     font-size:22px;
 
-    line-height:1;
-
     cursor:pointer;
 
-    flex-shrink:0;
-
-    transition:all .25s ease;
+    transition:.25s;
 }
 
 .club-announce-modal-close:hover{
@@ -845,15 +880,15 @@ a.club-banner-link{
 
 .club-announce-modal-body{
 
-    padding:18px;
-
-    overflow-y:auto;
-
     display:flex;
 
     flex-direction:column;
 
     gap:14px;
+
+    overflow-y:auto;
+
+    padding:18px;
 
     background:#141414;
 }
@@ -868,7 +903,7 @@ a.club-banner-link{
 
     border:1px solid rgba(255,255,255,.06);
 
-    transition:all .25s ease;
+    transition:.25s;
 }
 
 .club-announce-modal-item:hover{
@@ -888,370 +923,308 @@ a.club-banner-link{
 
     font-weight:700;
 
-    color:#ffffff;
+    color:#fff;
 }
 
 .club-announce-modal-item p{
 
-    margin:0;
-
-    font-size:13px;
+    font-size:14px;
 
     line-height:1.7;
 
-    color:#B8B8B8;
+    color:#CFCFCF;
+}
+/* ==========================================================
+   ANNOUNCEMENT STATES
+========================================================== */
+
+.club-announce-detail:hover{
+
+    background:#E6C65A;
+
+    transform:translateY(-2px);
 }
 
-.club-announce-modal-item.featured{
+.club-announce-detail:active{
 
-    background:#1C1A14;
-
-    border-color:rgba(212,175,55,.25);
+    transform:scale(.98);
 }
 
-.club-announce-modal-item.maintenance{
+.club-announce.maintenance{
 
-    background:#241B12;
+    background:#221A10;
 
-    border-color:rgba(212,175,55,.28);
+    border:1px solid rgba(212,175,55,.22);
 }
 
-.club-announce-modal-item.maintenance p{
+.club-announce.maintenance .club-marquee span{
 
-    color:#F0D67A;
+    color:#F3D57B;
 }
 
-.club-announce-modal-tag{
+.club-announce[role="button"]{
 
-    display:inline-flex;
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.club-announce[role="button"]:hover{
+
+    border-color:rgba(212,175,55,.30);
+
+    transform:translateY(-1px);
+}
+
+.club-announce[role="button"]:active{
+
+    transform:scale(.995);
+}
+
+
+/* ==========================================================
+   ANNOUNCEMENT MODAL
+========================================================== */
+
+.club-announce-modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:flex;
 
     align-items:center;
 
     justify-content:center;
 
-    margin-bottom:10px;
+    padding:20px;
 
-    padding:5px 12px;
+    background:rgba(0,0,0,.72);
 
-    border-radius:999px;
+    backdrop-filter:blur(8px);
 
-    background:#D4AF37;
-
-    color:#111;
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
+    animation:clubAnnounceFade .25s ease;
 }
 
-.club-announce-modal-item.maintenance .club-announce-modal-tag{
+@keyframes clubAnnounceFade{
 
-    background:#E8C766;
+    from{
 
-    color:#111;
+        opacity:0;
+    }
+
+    to{
+
+        opacity:1;
+    }
 }
 
-.club-announce-modal-marquee-text{
-
-    font-size:13px;
-
-    line-height:1.7;
-
-    color:#D7D7D7;
-}
-
-.club-announce-modal-link{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    margin-top:12px;
-
-    color:#D4AF37;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    text-decoration:none;
-
-    transition:all .25s ease;
-}
-
-.club-announce-modal-link:hover{
-
-    color:#E6C65A;
-
-    transform:translateX(3px);
-}.club-announce-modal-footer{
-
-    padding:18px;
-
-    border-top:1px solid rgba(255,255,255,.06);
-
-    background:#181818;
-}
-
-.club-announce-modal-ok{
+.club-announce-modal{
 
     width:100%;
 
-    height:48px;
+    max-width:430px;
 
-    border:none;
-
-    border-radius:14px;
-
-    background:#D4AF37;
-
-    color:#111;
-
-    font-size:14px;
-
-    font-weight:800;
-
-    cursor:pointer;
-
-    transition:all .25s ease;
-
-    box-shadow:none;
-}
-
-.club-announce-modal-ok:hover{
-
-    background:#E6C65A;
-
-    transform:translateY(-1px);
-}
-
-.club-announce-modal-ok:active{
-
-    transform:scale(.98);
-}
-
-/* ==========================================
-   CATEGORIES
-========================================== */
-
-.club-categories{
-
-    display:flex;
-
-    gap:14px;
-
-    margin:0 18px 20px;
-
-    padding:18px;
-
-    background:#141414;
-
-    border:1px solid rgba(255,255,255,.06);
-
-    border-radius:20px;
-
-    overflow-x:auto;
-
-    scrollbar-width:none;
-}
-
-.club-categories::-webkit-scrollbar{
-
-    display:none;
-}
-
-.club-category-tab{
-
-    flex-shrink:0;
+    max-height:88vh;
 
     display:flex;
 
     flex-direction:column;
 
-    align-items:center;
-
-    gap:10px;
-
-    min-width:72px;
-
-    border:none;
-
-    background:none;
-
-    color:#9E9E9E;
-
-    cursor:pointer;
-
-    transition:.25s ease;
-}
-
-.club-category-tab:hover{
-
-    transform:translateY(-2px);
-}
-
-.club-category-icon-wrap{
-    width:58px;
-    height:58px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     overflow:hidden;
-    border-radius:16px;   /* ya 18px */
+
+    background:#141414;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.45);
+
+    animation:clubAnnouncePop .28s ease;
 }
 
-.club-category-icon{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:16px;   /* same as wrapper */
-    display:block;
-}
-.club-category-label{
+@keyframes clubAnnouncePop{
 
-    font-size:12px;
+    from{
 
-    font-weight:600;
+        opacity:0;
 
-    text-align:center;
+        transform:translateY(24px) scale(.96);
+    }
 
-    white-space:nowrap;
+    to{
 
-    color:#A9A9A9;
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+    }
 }
 
-.club-category-tab.active .club-category-icon-wrap{
+.club-announce-modal-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px;
+
+    background:#1A1A1A;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.club-announce-modal-header-icon{
+
+    width:48px;
+
+    height:48px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
 
     background:#D4AF37;
 
-    border-color:#D4AF37;
-
     color:#111;
 
-    box-shadow:none;
-}
-
-.club-category-tab.active .club-category-label{
-
-    color:#ffffff;
+    font-size:20px;
 
     font-weight:700;
 }
 
-/* ==========================================
-   SECTION HEADER
-========================================== */
+.club-announce-modal-kicker{
 
-.club-section-header{
+    margin:0;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:#D4AF37;
+}
+
+.club-announce-modal-header h2{
+
+    margin:4px 0 0;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    line-height:1.3;
+
+    color:#fff;
+}
+
+.club-announce-modal-close{
+
+    margin-left:auto;
+
+    width:38px;
+
+    height:38px;
 
     display:flex;
 
     align-items:center;
 
-    justify-content:space-between;
+    justify-content:center;
 
-    padding:0 18px 14px;
-}
+    border-radius:12px;
 
-.club-section-header h2{
+    background:#242424;
 
-    font-size:19px;
+    color:#D6D6D6;
 
-    font-weight:800;
+    font-size:22px;
 
-    color:#ffffff;
-}
-
-.club-section-header a{
-
-    color:#D4AF37;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    text-decoration:none;
+    cursor:pointer;
 
     transition:.25s;
 }
 
-.club-section-header a:hover{
+.club-announce-modal-close:hover{
 
-    color:#E6C65A;
+    background:#303030;
+
+    color:#fff;
+
+    transform:rotate(90deg);
 }
 
-/* ==========================================
-   POPULAR GAMES
-========================================== */
-
-.club-popular-row{
-
-    position:relative;
-
-    padding:0 18px 22px;
-}
-
-.club-game-scroll{
+.club-announce-modal-body{
 
     display:flex;
 
-    gap:16px;
+    flex-direction:column;
 
-    overflow-x:auto;
+    gap:14px;
 
-    scroll-snap-type:x mandatory;
+    overflow-y:auto;
 
-    scrollbar-width:none;
+    padding:18px;
 
-    -ms-overflow-style:none;
-
-    padding-bottom:6px;
+    background:#141414;
 }
 
-.club-game-scroll::-webkit-scrollbar{
+.club-announce-modal-item{
 
-    display:none;
-}.club-game-scroll-btn{
+    padding:16px;
 
-    position:absolute;
+    border-radius:16px;
 
-    right:18px;
+    background:#1A1A1A;
 
-    top:50%;
+    border:1px solid rgba(255,255,255,.06);
 
-    transform:translateY(-50%);
-
-    width:40px;
-
-    height:40px;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:#1C1C1C;
-
-    color:#D4AF37;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:all .25s ease;
-
-    box-shadow:0 8px 18px rgba(0,0,0,.28);
+    transition:.25s;
 }
 
+.club-announce-modal-item:hover{
+
+    border-color:rgba(212,175,55,.18);
+
+    transform:translateY(-2px);
+}
+
+.club-announce-modal-item strong{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#fff;
+}
+
+.club-announce-modal-item p{
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:#CFCFCF;
+}
 .club-game-scroll-btn:hover{
 
     background:#262626;
@@ -1292,15 +1265,35 @@ a.club-banner-link{
     box-shadow:0 10px 25px rgba(0,0,0,.22);
 }
 
+/* ==========================================================
+   POPULAR GAME CARD
+========================================================== */
+
+.club-popular-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:#161616;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.30s ease;
+
+    box-shadow:0 10px 22px rgba(0,0,0,.22);
+}
+
 .club-popular-card:hover{
 
     transform:translateY(-5px);
 
     border-color:rgba(212,175,55,.22);
 
-    box-shadow:0 16px 32px rgba(0,0,0,.32);
-
-    text-decoration:none;
+    box-shadow:
+        0 18px 36px rgba(0,0,0,.35);
 }
 
 .club-popular-card.featured{
@@ -1315,22 +1308,18 @@ a.club-banner-link{
     cursor:pointer;
 }
 
-.club-popular-card.coming-soon:hover{
 
-    transform:translateY(-5px);
-}
-
-/* ========================================
-   IMAGE
-======================================== */
+/* ==========================================================
+   POPULAR CARD IMAGE
+========================================================== */
 
 .club-popular-card-media{
 
     position:relative;
 
-    aspect-ratio:3/4;
-
     overflow:hidden;
+
+    aspect-ratio:3/4;
 
     background:#0F0F0F;
 }
@@ -1348,7 +1337,8 @@ a.club-banner-link{
     transition:transform .45s ease;
 }
 
-.club-popular-card:hover .club-popular-card-img{
+.club-popular-card:hover
+.club-popular-card-img{
 
     transform:scale(1.06);
 }
@@ -1368,9 +1358,10 @@ a.club-banner-link{
     font-size:44px;
 }
 
-/* ========================================
-   CARD INFO
-======================================== */
+
+/* ==========================================================
+   POPULAR CARD INFO
+========================================================== */
 
 .club-popular-card-meta{
 
@@ -1386,29 +1377,30 @@ a.club-banner-link{
 
     padding:14px 12px;
 
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.88),
-        rgba(0,0,0,.55),
-        transparent
-    );
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.90),
+            rgba(0,0,0,.55),
+            transparent
+        );
 
     pointer-events:none;
-}.club-popular-card-meta strong{
+}
+
+.club-popular-card-meta strong{
 
     display:block;
+
+    margin-bottom:4px;
 
     font-size:15px;
 
     font-weight:700;
 
-    color:#ffffff;
-
     line-height:1.3;
 
-    margin-bottom:4px;
-
-    text-shadow:none;
+    color:#fff;
 }
 
 .club-popular-card-meta span{
@@ -1417,16 +1409,15 @@ a.club-banner-link{
 
     font-size:12px;
 
-    color:#C6C6C6;
-
     line-height:1.4;
 
-    text-shadow:none;
+    color:#C6C6C6;
 }
 
-/* ========================================
+
+/* ==========================================================
    BADGES
-======================================== */
+========================================================== */
 
 .club-game-badge{
 
@@ -1471,14 +1462,15 @@ a.club-banner-link{
 
     right:12px;
 
-    background:#2D2D2D;
+    background:#2B2B2B;
 
-    color:#ffffff;
+    color:#fff;
 }
 
-/* ========================================
+
+/* ==========================================================
    GAME GRID
-======================================== */
+========================================================== */
 
 .club-game-grid{
 
@@ -1491,19 +1483,24 @@ a.club-banner-link{
     padding:0 18px 24px;
 }
 
-/* ========================================
+
+/* ==========================================================
    GAME CARD
-======================================== */
+========================================================== */
 
 .club-game-card{
 
     position:relative;
 
-    aspect-ratio:3/4;
-
     overflow:hidden;
 
+    aspect-ratio:3/4;
+
     border-radius:18px;
+
+    background:#161616;
+
+    border:1px solid rgba(255,255,255,.06);
 
     display:flex;
 
@@ -1513,11 +1510,7 @@ a.club-banner-link{
 
     text-decoration:none;
 
-    background:#161616;
-
-    border:1px solid rgba(255,255,255,.06);
-
-    transition:all .30s ease;
+    transition:.30s ease;
 
     box-shadow:0 10px 22px rgba(0,0,0,.22);
 }
@@ -1528,21 +1521,12 @@ a.club-banner-link{
 
     border-color:rgba(212,175,55,.22);
 
-    box-shadow:0 18px 34px rgba(0,0,0,.35);
-
-    text-decoration:none;
+    box-shadow:
+        0 18px 36px rgba(0,0,0,.35);
 }
 
-.club-game-card.wingo{
-
-    background:#181818;
-}
-
-.club-game-card.aviator{
-
-    background:#181818;
-}
-
+.club-game-card.wingo,
+.club-game-card.aviator,
 .club-game-card.cricket{
 
     background:#181818;
@@ -1561,7 +1545,8 @@ a.club-banner-link{
     transition:transform .45s ease;
 }
 
-.club-game-card:hover .club-game-card-img{
+.club-game-card:hover
+.club-game-card-img{
 
     transform:scale(1.06);
 }
@@ -1597,24 +1582,23 @@ a.club-banner-link{
 
     padding:14px 12px;
 
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.90),
+            rgba(0,0,0,.55),
+            transparent
+        );
+
     font-size:15px;
 
     font-weight:700;
 
-    color:#ffffff;
-
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.90),
-        rgba(0,0,0,.55),
-        transparent
-    );
-
     letter-spacing:.3px;
 
-    text-align:left;
+    color:#fff;
 
-    text-shadow:none;
+    text-align:left;
 }
 
 .club-game-card.coming-soon{
@@ -1624,10 +1608,7 @@ a.club-banner-link{
     cursor:pointer;
 }
 
-.club-game-card.coming-soon:hover{
-
-    transform:translateY(-5px);
-}.club-game-soon-badge{
+.club-game-soon-badge{
 
     position:absolute;
 
@@ -1643,8 +1624,6 @@ a.club-banner-link{
 
     background:#2B2B2B;
 
-    border:none;
-
     color:#D4AF37;
 
     font-size:10px;
@@ -1656,9 +1635,9 @@ a.club-banner-link{
     text-transform:uppercase;
 }
 
-/* ==========================================
+/* ==========================================================
    MODAL
-========================================== */
+========================================================== */
 
 .club-modal-overlay{
 
@@ -1679,6 +1658,19 @@ a.club-banner-link{
     background:rgba(0,0,0,.75);
 
     backdrop-filter:blur(8px);
+
+    animation:clubModalFade .25s ease;
+}
+
+@keyframes clubModalFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
 }
 
 .club-modal{
@@ -1687,15 +1679,35 @@ a.club-banner-link{
 
     max-width:390px;
 
+    padding:22px;
+
+    border-radius:22px;
+
     background:#151515;
 
     border:1px solid rgba(255,255,255,.06);
 
-    border-radius:22px;
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.40);
 
-    padding:22px;
+    animation:clubModalPop .28s ease;
+}
 
-    box-shadow:0 20px 45px rgba(0,0,0,.40);
+@keyframes clubModalPop{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px) scale(.96);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+    }
 }
 
 .club-modal-header{
@@ -1717,13 +1729,13 @@ a.club-banner-link{
 
     height:52px;
 
-    border-radius:16px;
-
     display:flex;
 
     align-items:center;
 
     justify-content:center;
+
+    border-radius:16px;
 
     background:#D4AF37;
 
@@ -1738,11 +1750,11 @@ a.club-banner-link{
 
     font-weight:700;
 
-    color:#D4AF37;
+    letter-spacing:2px;
 
     text-transform:uppercase;
 
-    letter-spacing:2px;
+    color:#D4AF37;
 }
 
 .club-modal-header h3{
@@ -1762,26 +1774,30 @@ a.club-banner-link{
 
     height:38px;
 
-    border:none;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     border-radius:12px;
 
     background:#232323;
 
-    color:#ddd;
+    color:#DDD;
 
     font-size:22px;
-
-    cursor:pointer;
 
     transition:.25s;
 }
 
 .club-modal-close:hover{
 
-    background:#2F2F2F;
+    background:#303030;
 
-    color:#fff;
+    color:#FFF;
+
+    transform:rotate(90deg);
 }
 
 .club-modal-text,
@@ -1790,6 +1806,9 @@ a.club-banner-link{
     font-size:14px;
 
     line-height:1.7;
+}
+
+.club-modal-text{
 
     color:#B9B9B9;
 }
@@ -1805,7 +1824,7 @@ a.club-banner-link{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
 
     gap:14px;
 
@@ -1835,14 +1854,21 @@ a.club-banner-link{
 
 .club-modal-btn.primary{
 
-    background:#D4AF37;
+    background:
+        linear-gradient(
+            180deg,
+            #F2D468 0%,
+            #D4AF37 100%
+        );
 
     color:#111;
 }
 
 .club-modal-btn.primary:hover{
 
-    background:#E5C95A;
+    filter:brightness(1.05);
+
+    transform:translateY(-2px);
 }
 
 .club-modal-btn.secondary{
@@ -1851,25 +1877,28 @@ a.club-banner-link{
 
     border:1px solid rgba(255,255,255,.06);
 
-    color:#fff;
+    color:#FFF;
 }
 
 .club-modal-btn.secondary:hover{
 
-    background:#2F2F2F;
+    background:#303030;
+
+    transform:translateY(-2px);
 }
 
-/* ==========================================
-   BOTTOM NAV
-========================================== */
+
+/* ==========================================================
+   BOTTOM NAVIGATION
+========================================================== */
 
 .club-bottom-nav{
 
     position:fixed;
 
-    bottom:0;
-
     left:50%;
+
+    bottom:0;
 
     transform:translateX(-50%);
 
@@ -1896,6 +1925,8 @@ a.club-banner-link{
 
 .club-nav-item{
 
+    flex:1;
+
     display:flex;
 
     flex-direction:column;
@@ -1906,24 +1937,18 @@ a.club-banner-link{
 
     gap:5px;
 
-    flex:1;
-
     color:#8B8B8B;
-
-    text-decoration:none;
 
     font-size:11px;
 
     font-weight:600;
 
+    text-decoration:none;
+
     transition:.25s;
 }
 
-.club-nav-item:hover{
-
-    color:#D4AF37;
-}
-
+.club-nav-item:hover,
 .club-nav-item.active{
 
     color:#D4AF37;
@@ -1942,7 +1967,11 @@ a.club-banner-link{
     justify-content:center;
 
     font-size:22px;
-}.club-nav-icon-svg,
+
+    transition:.25s;
+}
+
+.club-nav-icon-svg,
 .club-nav-icon-svg svg{
 
     width:24px;
@@ -1951,17 +1980,20 @@ a.club-banner-link{
 
     display:block;
 
-    transition:all .25s ease;
+    transition:.25s;
 }
 
 .club-nav-item.active .club-nav-icon{
 
     color:#D4AF37;
 
-    filter:none;
-
     transform:translateY(-2px);
 }
+
+
+/* ==========================================================
+   PROMO BUTTON
+========================================================== */
 
 .club-nav-item.promo{
 
@@ -1974,12 +2006,6 @@ a.club-banner-link{
 
     height:58px;
 
-    border-radius:18px;
-
-    border:none;
-
-    background:#1A1A1A;
-
     display:flex;
 
     align-items:center;
@@ -1990,16 +2016,19 @@ a.club-banner-link{
 
     padding:0;
 
-    text-decoration:none;
+    border-radius:18px;
 
-    box-shadow:0 12px 25px rgba(0,0,0,.30);
+    background:#1A1A1A;
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.30);
 
     transition:.25s;
 }
 
 .club-nav-promo-btn:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
 .club-nav-promo-img{
@@ -2008,16 +2037,12 @@ a.club-banner-link{
 
     height:54px;
 
-    object-fit:contain;
-
     display:block;
 
-    filter:none;
+    object-fit:contain;
 }
 
 .club-nav-item.promo span:last-child{
-
-    color:#D4AF37;
 
     margin-top:4px;
 
@@ -2026,11 +2051,8 @@ a.club-banner-link{
     font-weight:700;
 
     letter-spacing:1px;
-}
 
-.club-nav-partner-btn .club-nav-promo-img{
-
-    filter:none;
+    color:#D4AF37;
 }
 
 .club-nav-item.promo.active span:last-child{
@@ -2038,9 +2060,15 @@ a.club-banner-link{
     color:#D4AF37;
 }
 
-/* ==========================================
+.club-nav-partner-btn
+.club-nav-promo-img{
+
+    filter:none;
+}
+/* ==========================================================
    AUTH PAGE
-========================================== */
+========================================================== */
+
 .auth-page{
 
     min-height:100vh;
@@ -2049,16 +2077,31 @@ a.club-banner-link{
 
     margin:0 auto;
 
-    color:#fff;
-
     padding-bottom:40px;
 
     box-sizing:border-box;
 
+    color:#fff;
+
     background:
-        radial-gradient(circle at top right, rgba(255,215,80,.12), transparent 35%),
-        linear-gradient(180deg,#171511 0%,#111111 35%,#0d0d0d 100%);
+        radial-gradient(
+            circle at top right,
+            rgba(255,215,80,.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #171511 0%,
+            #111111 35%,
+            #0D0D0D 100%
+        );
 }
+
+
+/* ==========================================================
+   TOP BAR
+========================================================== */
+
 .auth-topbar{
 
     display:flex;
@@ -2080,13 +2123,13 @@ a.club-banner-link{
 
     height:42px;
 
-    border-radius:12px;
-
     display:flex;
 
     align-items:center;
 
     justify-content:center;
+
+    border-radius:12px;
 
     background:#1A1A1A;
 
@@ -2101,10 +2144,12 @@ a.club-banner-link{
 
 .auth-back:hover{
 
-    background:#242424;
+    background:#262626;
 }
 
 .auth-topbar-logo{
+
+    flex:1;
 
     display:flex;
 
@@ -2113,8 +2158,6 @@ a.club-banner-link{
     justify-content:center;
 
     gap:8px;
-
-    flex:1;
 
     font-size:16px;
 
@@ -2128,49 +2171,76 @@ a.club-banner-link{
 
 .auth-lang{
 
+    padding:8px 12px;
+
+    border-radius:12px;
+
     background:#1E1E1E;
 
     border:1px solid rgba(255,255,255,.06);
-
-    border-radius:12px;
 
     color:#fff;
 
     font-size:12px;
 
-    padding:8px 12px;
-
     cursor:pointer;
+
+    transition:.25s;
 }
 
-/* ==========================================
-   PREMIUM AUTH BANNER
-========================================== */
+.auth-lang:hover{
+
+    border-color:#D4AF37;
+}
+
+
+/* ==========================================================
+   PREMIUM HERO
+========================================================== */
 
 .auth-banner{
+
     position:relative;
+
     overflow:hidden;
 
-    padding:48px 24px 100px;
+    padding:34px 22px 28px;
 
     background:
-        radial-gradient(circle at top right, rgba(255,215,80,.22), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(255,180,40,.08), transparent 45%),
-        linear-gradient(135deg,#1B1B1B 0%,#111111 55%,#090909 100%);
+        radial-gradient(
+            circle at top right,
+            rgba(255,215,80,.22),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom left,
+            rgba(255,180,40,.08),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #1B1B1B 0%,
+            #111111 55%,
+            #090909 100%
+        );
 
     border-bottom:1px solid rgba(255,215,80,.08);
 }
 
-/* Large Gold Glow */
-
 .auth-banner::before{
+
     content:"";
+
     position:absolute;
 
     top:-120px;
+
     right:-90px;
 
     width:260px;
+
     height:260px;
 
     border-radius:50%;
@@ -2180,16 +2250,18 @@ a.club-banner-link{
     filter:blur(90px);
 }
 
-/* Bottom Glow */
-
 .auth-banner::after{
+
     content:"";
+
     position:absolute;
 
     left:-80px;
+
     bottom:-120px;
 
     width:220px;
+
     height:220px;
 
     border-radius:50%;
@@ -2199,9 +2271,14 @@ a.club-banner-link{
     filter:blur(75px);
 }
 
-.auth-banner h1{
+.auth-banner-content{
+
     position:relative;
-    z-index:2;
+
+    z-index:5;
+}
+
+.auth-banner h1{
 
     margin:0 0 14px;
 
@@ -2211,21 +2288,14 @@ a.club-banner-link{
 
     line-height:1;
 
-    color:#fff;
-
     letter-spacing:-1px;
 
-    text-shadow:
-        0 4px 16px rgba(255,215,80,.15);
+    color:#fff;
 }
 
 .auth-banner p{
-    position:relative;
-    z-index:2;
 
     max-width:300px;
-
-    margin:0;
 
     font-size:15px;
 
@@ -2233,33 +2303,31 @@ a.club-banner-link{
 
     color:#D8D8D8;
 }
-/* ==========================
-   PREMIUM HERO LAYOUT
-========================== */
 
-.auth-banner{
-    position:relative;
 
-    display:block;
-
-    padding:34px 22px 26px;
-}
-
-.auth-banner-content{
-    position:relative;
-    z-index:5;
-}
+/* ==========================================================
+   HERO BADGE
+========================================================== */
 
 .hero-badge{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
+    margin-bottom:18px;
 
     padding:8px 18px;
 
     border-radius:999px;
 
-    background:linear-gradient(90deg,#FFD54A,#D4AF37);
+    background:linear-gradient(
+        90deg,
+        #FFD54A,
+        #D4AF37
+    );
 
     color:#111;
 
@@ -2269,10 +2337,14 @@ a.club-banner-link{
 
     letter-spacing:1px;
 
-    margin-bottom:18px;
-
-    box-shadow:0 8px 20px rgba(212,175,55,.25);
+    box-shadow:
+        0 8px 20px rgba(212,175,55,.25);
 }
+
+
+/* ==========================================================
+   HERO STATS
+========================================================== */
 
 .hero-stats{
 
@@ -2289,6 +2361,8 @@ a.club-banner-link{
 
     padding:12px 6px;
 
+    text-align:center;
+
     border-radius:16px;
 
     background:rgba(255,255,255,.05);
@@ -2296,21 +2370,19 @@ a.club-banner-link{
     border:1px solid rgba(255,255,255,.05);
 
     backdrop-filter:blur(10px);
-
-    text-align:center;
 }
 
 .hero-stat strong{
 
     display:block;
 
+    margin-bottom:4px;
+
     font-size:17px;
 
     font-weight:800;
 
     color:#FFD54A;
-
-    margin-bottom:4px;
 }
 
 .hero-stat span{
@@ -2320,7 +2392,10 @@ a.club-banner-link{
     color:#AFAFAF;
 }
 
-/* Bonus Card */
+
+/* ==========================================================
+   BONUS CARD
+========================================================== */
 
 .hero-card{
 
@@ -2328,11 +2403,16 @@ a.club-banner-link{
 
     width:100%;
 
-    border-radius:20px;
-
     padding:22px;
 
-    background:linear-gradient(180deg,#1D1D1D,#121212);
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #1D1D1D,
+            #121212
+        );
 
     border:1px solid rgba(255,215,80,.12);
 
@@ -2342,9 +2422,9 @@ a.club-banner-link{
 
 .hero-card-top{
 
-    font-size:42px;
-
     margin-bottom:12px;
+
+    font-size:42px;
 }
 
 .hero-card-title{
@@ -2367,12 +2447,15 @@ a.club-banner-link{
 
 .hero-card-text{
 
-    color:#A5A5A5;
-
     font-size:12px;
 
     line-height:1.7;
-}
+
+    color:#A5A5A5;
+}/* ==========================================================
+   AUTH BODY
+========================================================== */
+
 .auth-body{
 
     padding:24px;
@@ -2409,6 +2492,11 @@ a.club-banner-link{
     color:#8C8C8C;
 }
 
+
+/* ==========================================================
+   FORM
+========================================================== */
+
 .auth-field{
 
     margin-bottom:18px;
@@ -2424,12 +2512,17 @@ a.club-banner-link{
 
     margin-bottom:8px;
 
-    font-size:13px;
-
     color:#C8C8C8;
+
+    font-size:13px;
 
     font-weight:600;
 }
+
+
+/* ==========================================================
+   INPUTS
+========================================================== */
 
 .auth-input,
 .auth-phone-input{
@@ -2453,7 +2546,8 @@ a.club-banner-link{
     transition:.25s;
 }
 
-.auth-input::placeholder{
+.auth-input::placeholder,
+.auth-phone-input::placeholder{
 
     color:#7D7D7D;
 }
@@ -2461,12 +2555,18 @@ a.club-banner-link{
 .auth-input:focus,
 .auth-phone-input:focus{
 
-    outline:none;
-
     border-color:#D4AF37;
 
     background:#1E1E1E;
+
+    box-shadow:
+        0 0 0 3px rgba(212,175,55,.12);
 }
+
+
+/* ==========================================================
+   PHONE
+========================================================== */
 
 .auth-phone-row{
 
@@ -2496,6 +2596,8 @@ a.club-banner-link{
     color:#fff;
 
     font-size:14px;
+
+    white-space:nowrap;
 }
 
 .auth-chevron{
@@ -2505,6 +2607,11 @@ a.club-banner-link{
     font-size:11px;
 }
 
+
+/* ==========================================================
+   PASSWORD
+========================================================== */
+
 .auth-input-wrap{
 
     position:relative;
@@ -2512,26 +2619,30 @@ a.club-banner-link{
 
 .auth-input-wrap .auth-input{
 
-    padding-right:46px;
+    padding-right:48px;
 }
 
 .auth-eye{
 
     position:absolute;
 
-    right:14px;
-
     top:50%;
+
+    right:14px;
 
     transform:translateY(-50%);
 
-    background:none;
+    display:flex;
 
-    border:none;
+    align-items:center;
+
+    justify-content:center;
+
+    width:28px;
+
+    height:28px;
 
     color:#A0A0A0;
-
-    font-size:18px;
 
     cursor:pointer;
 
@@ -2541,7 +2652,14 @@ a.club-banner-link{
 .auth-eye:hover{
 
     color:#D4AF37;
-}.auth-check-row{
+}
+
+
+/* ==========================================================
+   CHECKBOX
+========================================================== */
+
+.auth-check-row{
 
     display:flex;
 
@@ -2551,11 +2669,11 @@ a.club-banner-link{
 
     margin:20px 0 24px;
 
+    color:#B8B8B8;
+
     font-size:13px;
 
     line-height:1.6;
-
-    color:#B8B8B8;
 }
 
 .auth-check-row input{
@@ -2575,9 +2693,9 @@ a.club-banner-link{
 
     color:#D4AF37;
 
-    text-decoration:none;
-
     font-weight:600;
+
+    transition:.25s;
 }
 
 .auth-check-row a:hover{
@@ -2585,9 +2703,106 @@ a.club-banner-link{
     color:#E6C65A;
 }
 
-/* ==========================
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.auth-error{
+
+    margin-bottom:18px;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    background:rgba(255,80,80,.10);
+
+    border:1px solid rgba(255,80,80,.20);
+
+    color:#FF8F8F;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+
+/* ==========================================================
+   SUCCESS
+========================================================== */
+
+.auth-success{
+
+    margin-bottom:18px;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    background:rgba(38,194,129,.10);
+
+    border:1px solid rgba(38,194,129,.20);
+
+    color:#6EE7A6;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+
+/* ==========================================================
    AUTH BUTTONS
-========================== */
+========================================================== */
+
+.auth-submit{
+
+    width:100%;
+
+    height:54px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F2D468 0%,
+            #D4AF37 100%
+        );
+
+    color:#111;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    transition:.25s;
+}
+
+.auth-submit:hover{
+
+    transform:translateY(-2px);
+
+    filter:brightness(1.05);
+}
+
+.auth-submit:active{
+
+    transform:scale(.98);
+}
+
+.auth-submit:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+/* ==========================================================
+   AUTH BUTTONS
+========================================================== */
 
 .auth-btn-primary{
 
@@ -2595,11 +2810,20 @@ a.club-banner-link{
 
     height:52px;
 
-    border:none;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     border-radius:14px;
 
-    background:#D4AF37;
+    background:
+        linear-gradient(
+            180deg,
+            #F2D468 0%,
+            #D4AF37 100%
+        );
 
     color:#111;
 
@@ -2613,14 +2837,20 @@ a.club-banner-link{
 
     transition:.25s;
 
-    box-shadow:none;
+    box-shadow:
+        0 10px 24px rgba(212,175,55,.20);
 }
 
 .auth-btn-primary:hover{
 
-    background:#E5C95A;
+    filter:brightness(1.05);
 
-    transform:translateY(-1px);
+    transform:translateY(-2px);
+}
+
+.auth-btn-primary:active{
+
+    transform:scale(.98);
 }
 
 .auth-btn-primary:disabled{
@@ -2632,19 +2862,28 @@ a.club-banner-link{
     transform:none;
 }
 
+
+/* ==========================================================
+   LOGIN BUTTON
+========================================================== */
+
 .auth-btn-login{
 
     width:100%;
 
     height:52px;
 
-    border:none;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     border-radius:14px;
 
     background:#222222;
 
-    color:#ffffff;
+    color:#FFF;
 
     font-size:15px;
 
@@ -2659,7 +2898,14 @@ a.club-banner-link{
 
 .auth-btn-login:hover{
 
-    background:#2C2C2C;
+    background:#2E2E2E;
+
+    transform:translateY(-2px);
+}
+
+.auth-btn-login:active{
+
+    transform:scale(.98);
 }
 
 .auth-btn-login:disabled{
@@ -2667,7 +2913,14 @@ a.club-banner-link{
     opacity:.55;
 
     cursor:not-allowed;
+
+    transform:none;
 }
+
+
+/* ==========================================================
+   OUTLINE BUTTON
+========================================================== */
 
 .auth-btn-outline{
 
@@ -2683,9 +2936,9 @@ a.club-banner-link{
 
     border-radius:14px;
 
-    background:transparent;
-
     border:1px solid rgba(212,175,55,.35);
+
+    background:transparent;
 
     color:#D4AF37;
 
@@ -2703,7 +2956,14 @@ a.club-banner-link{
     background:#1A1A1A;
 
     border-color:#D4AF37;
+
+    transform:translateY(-2px);
 }
+
+
+/* ==========================================================
+   DARK BUTTON
+========================================================== */
 
 .auth-btn-outline-dark{
 
@@ -2727,6 +2987,8 @@ a.club-banner-link{
 
     font-size:14px;
 
+    font-weight:600;
+
     text-decoration:none;
 
     transition:.25s;
@@ -2734,7 +2996,9 @@ a.club-banner-link{
 
 .auth-btn-outline-dark:hover{
 
-    background:#242424;
+    background:#252525;
+
+    transform:translateY(-2px);
 }
 
 .auth-btn-outline-dark strong{
@@ -2742,9 +3006,10 @@ a.club-banner-link{
     color:#D4AF37;
 }
 
-/* ==========================
-   FOOTER
-========================== */
+
+/* ==========================================================
+   AUTH FOOTER
+========================================================== */
 
 .auth-footer-links{
 
@@ -2783,6 +3048,8 @@ a.club-banner-link{
 .auth-footer-link:hover{
 
     color:#D4AF37;
+
+    transform:translateY(-2px);
 }
 
 .auth-footer-link span:first-child{
@@ -2790,43 +3057,10 @@ a.club-banner-link{
     font-size:22px;
 }
 
-/* ==========================
-   ALERTS
-========================== */
 
-.auth-error{
-
-    padding:14px 16px;
-
-    margin-bottom:18px;
-
-    border-radius:14px;
-
-    background:#2B1717;
-
-    border:1px solid rgba(231,76,60,.30);
-
-    color:#F6B4AE;
-
-    font-size:13px;
-}
-
-.auth-success{
-
-    padding:14px 16px;
-
-    margin-bottom:18px;
-
-    border-radius:14px;
-
-    background:#1F231B;
-
-    border:1px solid rgba(212,175,55,.20);
-
-    color:#F3D57B;
-
-    font-size:13px;
-}
+/* ==========================================================
+   DIVIDER
+========================================================== */
 
 .auth-divider{
 
@@ -3169,8 +3403,410 @@ a.club-banner-link{
 
     color:#C7C7C7;
 }
+/* ==========================================================
+   HERO IMAGE
+========================================================== */
 
-/* ---------- FEATURES ---------- */
+.premium-right{
+
+    width:180px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:flex-end;
+}
+
+.hero-image{
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:contain;
+
+    display:block;
+
+    filter:
+        drop-shadow(0 16px 30px rgba(255,215,80,.20));
+
+    animation:heroFloat 5s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+
+    0%{
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+    }
+
+    100%{
+
+        transform:translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   FORM SECTION
+========================================================== */
+
+.premium-form-section{
+
+    position:relative;
+
+    margin-top:-20px;
+
+    padding:0 18px 40px;
+
+    z-index:5;
+}
+
+.register-card{
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #181818 0%,
+            #121212 100%
+        );
+
+    border:1px solid rgba(255,215,80,.08);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35);
+}
+
+
+/* ==========================================================
+   TABS
+========================================================== */
+
+.register-tabs{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    padding:20px;
+}
+
+.register-tabs button{
+
+    height:48px;
+
+    border-radius:14px;
+
+    background:#1D1D1D;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    color:#BEBEBE;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.register-tabs button.active{
+
+    background:
+        linear-gradient(
+            180deg,
+            #F2D468,
+            #D4AF37
+        );
+
+    color:#111;
+
+    border-color:#D4AF37;
+}
+
+.register-tabs button:hover{
+
+    transform:translateY(-2px);
+}
+
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.premium-form{
+
+    padding:0 20px 22px;
+}
+
+.premium-field{
+
+    margin-bottom:18px;
+}
+
+.premium-field label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#D5D5D5;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+.premium-field small{
+
+    color:#8C8C8C;
+
+    font-weight:400;
+}
+
+
+/* ==========================================================
+   PASSWORD STRENGTH
+========================================================== */
+
+.password-strength{
+
+    margin-bottom:18px;
+}
+
+.password-strength span{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#9A9A9A;
+
+    font-size:12px;
+}
+
+.strength-bars{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:8px;
+}
+
+.strength-bars span{
+
+    height:5px;
+
+    margin:0;
+
+    border-radius:999px;
+
+    background:#2A2A2A;
+
+    transition:.25s;
+}
+
+.strength-bars span.active{
+
+    background:#D4AF37;
+}
+
+
+/* ==========================================================
+   REGISTER BUTTON
+========================================================== */
+
+.premium-register-btn{
+
+    width:100%;
+
+    height:54px;
+
+    margin-top:8px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F2D468,
+            #D4AF37
+        );
+
+    color:#111;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    transition:.25s;
+}
+
+.premium-register-btn:hover{
+
+    transform:translateY(-2px);
+
+    filter:brightness(1.05);
+}
+
+.premium-register-btn:active{
+
+    transform:scale(.98);
+}
+
+.premium-register-btn:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+
+/* ==========================================================
+   LOGIN BUTTON
+========================================================== */
+
+.premium-login-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    height:54px;
+
+    margin-top:14px;
+
+    border-radius:16px;
+
+    background:#1D1D1D;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    color:#CFCFCF;
+
+    font-size:14px;
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.premium-login-btn strong{
+
+    margin-left:5px;
+
+    color:#D4AF37;
+}
+
+.premium-login-btn:hover{
+
+    background:#262626;
+
+    transform:translateY(-2px);
+}
+
+
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.premium-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+    padding:0 20px 22px;
+}
+
+.feature-card{
+
+    padding:18px 14px;
+
+    border-radius:18px;
+
+    background:#181818;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    text-align:center;
+
+    transition:.25s;
+}
+
+.feature-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:rgba(255,215,80,.16);
+}
+
+.feature-icon{
+
+    width:52px;
+
+    height:52px;
+
+    margin:0 auto 12px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(212,175,55,.12);
+
+    font-size:24px;
+}
+
+.feature-card h4{
+
+    margin-bottom:8px;
+
+    color:#FFF;
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.feature-card p{
+
+    color:#A8A8A8;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+/* ==========================================================
+   HERO FEATURES
+========================================================== */
 
 .hero-features{
 
@@ -3201,41 +3837,24 @@ a.club-banner-link{
 
     backdrop-filter:blur(12px);
 
+    color:#E4E4E4;
+
     font-size:13px;
 
-    color:#E4E4E4;
+    transition:.25s;
 }
 
-/* ---------- BONUS CARD ---------- */
+.hero-feature:hover{
 
-.premium-right{
+    border-color:rgba(255,215,80,.16);
 
-    flex:1;
-
-    display:flex;
-
-    justify-content:flex-end;
-
-    align-items:center;
+    transform:translateY(-2px);
 }
-.hero-image{
 
-    width:100%;
 
-    max-width:280px;
-
-    height:auto;
-
-    display:block;
-
-    object-fit:contain;
-
-    pointer-events:none;
-
-    user-select:none;
-
-    filter:drop-shadow(0 15px 35px rgba(255,190,50,.35));
-}
+/* ==========================================================
+   BONUS CARD
+========================================================== */
 
 .bonus-card{
 
@@ -3243,37 +3862,40 @@ a.club-banner-link{
 
     overflow:hidden;
 
-    border-radius:22px;
-
     padding:22px;
 
-    background:linear-gradient(
-    180deg,
-    #262626,
-    #151515);
+    border-radius:22px;
 
-    border:1px solid
-    rgba(255,215,80,.18);
+    background:
+        linear-gradient(
+            180deg,
+            #262626 0%,
+            #151515 100%
+        );
+
+    border:1px solid rgba(255,215,80,.18);
 
     box-shadow:
-    0 18px 45px rgba(0,0,0,.35);
+        0 18px 45px rgba(0,0,0,.35);
 }
 
 .bonus-glow{
 
     position:absolute;
 
-    right:-70px;
     top:-70px;
 
+    right:-70px;
+
     width:150px;
+
     height:150px;
+
+    border-radius:50%;
 
     background:#FFD54A;
 
     opacity:.12;
-
-    border-radius:50%;
 
     filter:blur(60px);
 }
@@ -3284,9 +3906,9 @@ a.club-banner-link{
 
     z-index:2;
 
-    font-size:48px;
-
     margin-bottom:12px;
+
+    font-size:48px;
 }
 
 .bonus-small{
@@ -3295,13 +3917,15 @@ a.club-banner-link{
 
     z-index:2;
 
+    color:#FFD54A;
+
     font-size:11px;
+
+    font-weight:700;
 
     letter-spacing:2px;
 
-    color:#FFD54A;
-
-    font-weight:700;
+    text-transform:uppercase;
 }
 
 .bonus-price{
@@ -3316,7 +3940,7 @@ a.club-banner-link{
 
     font-weight:900;
 
-    color:#fff;
+    color:#FFF;
 }
 
 .bonus-text{
@@ -3325,577 +3949,15 @@ a.club-banner-link{
 
     z-index:2;
 
-    font-size:13px;
-
-    line-height:1.7;
-
     color:#BBBBBB;
-}
-
-/* ---------- FORM CARD ---------- */
-/* =========================
-   PREMIUM FORM SECTION
-========================= */
-
-.premium-form-section{
-
-    margin-top:0;
-
-    position:relative;
-
-    z-index:5;
-
-    padding:0 18px 40px;
-}
-
-.register-card{
-
-    margin-top:-14px;
-
-    position:relative;
-
-    z-index:5;
-
-    padding:24px;
-
-    border-radius:26px;
-
-    background:#151515;
-
-    border:1px solid rgba(255,215,80,.08);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.40);
-}
-/* ---------- TABS ---------- */
-
-.register-tabs{
-
-    display:flex;
-
-    gap:12px;
-
-    margin-bottom:28px;
-}
-
-.register-tabs button{
-
-    flex:1;
-
-    height:48px;
-
-    border:none;
-
-    border-radius:14px;
-
-    background:#232323;
-
-    color:#AFAFAF;
-
-    font-size:14px;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.25s;
-}
-
-.register-tabs button.active{
-
-    background:linear-gradient(
-    90deg,
-    #FFD54A,
-    #D4AF37);
-
-    color:#111;
-
-    box-shadow:
-    0 8px 20px
-    rgba(212,175,55,.30);
-}/* =====================================================
-   PREMIUM REGISTER PAGE - PART 2
-===================================================== */
-
-/* ---------- FORM ---------- */
-
-.premium-form-section{
-
-    margin-top:0;
-
-    position:relative;
-
-    z-index:5;
-
-    padding:0 18px 40px;
-}
-
-/* ---------- FIELD ---------- */
-
-.premium-field{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.premium-field label{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    color:#E5E5E5;
-}
-
-.premium-field small{
-
-    color:#8E8E8E;
-
-    font-size:11px;
-
-    font-weight:500;
-}
-
-/* ---------- INPUT ---------- */
-
-.auth-input,
-.auth-phone-input{
-
-    width:100%;
-
-    height:58px;
-
-    padding:0 18px;
-
-    border-radius:18px;
-
-    border:1px solid rgba(255,255,255,.06);
-
-    background:#1C1C1C;
-
-    color:#fff;
-
-    font-size:15px;
-
-    transition:.3s;
-}
-
-.auth-country-code{
-
-    height:58px;
-
-    border-radius:18px;
-
-    background:#1C1C1C;
-
-    border:1px solid rgba(255,255,255,.06);
-
-    padding:0 18px;
-}
-
-.auth-phone-row{
-
-    gap:12px;
-}
-
-.auth-input::placeholder{
-
-    color:#7B7B7B;
-}
-
-.auth-input:hover,
-.auth-phone-input:hover{
-
-    border-color:rgba(255,215,80,.18);
-}
-
-.auth-input:focus,
-.auth-phone-input:focus{
-
-    outline:none;
-
-    background:#232323;
-
-    border-color:#FFD54A;
-
-    box-shadow:
-        0 0 0 4px rgba(255,215,80,.08);
-}
-
-.auth-input-wrap .auth-input{
-
-    padding-right:56px;
-}
-
-.auth-eye{
-
-    right:18px;
-
-    color:#9A9A9A;
-
-    transition:.25s;
-}
-
-.auth-eye:hover{
-
-    color:#FFD54A;
-}
-
-/* ---------- PASSWORD ---------- */
-
-.password-strength{
-
-    margin-top:-8px;
-}
-
-.password-strength span{
-
-    font-size:12px;
-
-    color:#A6A6A6;
-}
-
-.strength-bars{
-
-    display:flex;
-
-    gap:8px;
-
-    margin-top:12px;
-}
-
-.strength-bars span{
-
-    flex:1;
-
-    height:6px;
-
-    border-radius:999px;
-
-    background:#2C2C2C;
-
-    transition:.25s;
-}
-
-.strength-bars span.active{
-
-    background:linear-gradient(
-    90deg,
-    #FFD54A,
-    #D4AF37);
-}
-
-/* ---------- CHECK ---------- */
-
-.premium-check{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:12px;
 
     font-size:13px;
 
     line-height:1.7;
-
-    color:#C4C4C4;
 }
-
-.premium-check input{
-
-    width:18px;
-
-    height:18px;
-
-    accent-color:#FFD54A;
-
-    margin-top:2px;
-}
-
-.premium-check a{
-
-    color:#FFD54A;
-
-    text-decoration:none;
-
-    font-weight:700;
-}
-
-.premium-check a:hover{
-
-    color:#FFE37A;
-}
-
-/* ---------- REGISTER BUTTON ---------- */
-
-.premium-register-btn{
-
-    width:100%;
-
-    height:58px;
-
-    border:none;
-
-    border-radius:18px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    font-weight:800;
-
-    color:#111;
-
-    background:linear-gradient(
-    90deg,
-    #FFD54A,
-    #D4AF37);
-
-    transition:.3s;
-
-    box-shadow:
-        0 12px 28px rgba(212,175,55,.25);
-}
-
-.premium-register-btn:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 18px 36px rgba(212,175,55,.38);
-}
-
-.premium-register-btn:active{
-
-    transform:scale(.98);
-}
-
-.premium-register-btn:disabled{
-
-    opacity:.55;
-
-    cursor:not-allowed;
-
-    transform:none;
-}
-
-/* ---------- LOGIN BUTTON ---------- */
-
-.premium-login-btn{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:6px;
-
-    width:100%;
-
-    height:56px;
-
-    border-radius:18px;
-
-    background:#222222;
-
-    border:1px solid rgba(255,255,255,.05);
-
-    color:#D9D9D9;
-
-    text-decoration:none;
-
-    font-size:14px;
-
-    transition:.25s;
-}
-
-.premium-login-btn strong{
-
-    color:#FFD54A;
-}
-
-.premium-login-btn:hover{
-
-    background:#292929;
-
-    border-color:rgba(255,215,80,.15);
-}/* =====================================================
-   PREMIUM REGISTER PAGE - PART 3
-===================================================== */
-
-/* ---------- FEATURES ---------- */
-
-.premium-features{
-
-    margin-top:36px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:16px;
-}
-
-.feature-card{
-
-    position:relative;
-
-    overflow:hidden;
-
-    padding:22px 18px;
-
-    border-radius:20px;
-
-    background:linear-gradient(
-        180deg,
-        #1B1B1B,
-        #141414);
-
-    border:1px solid rgba(255,255,255,.05);
-
-    transition:.35s;
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.22);
-}
-
-.feature-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-80px;
-    right:-80px;
-
-    width:160px;
-    height:160px;
-
-    border-radius:50%;
-
-    background:rgba(255,215,80,.05);
-
-    filter:blur(40px);
-
-    opacity:0;
-
-    transition:.35s;
-}
-
-.feature-card:hover{
-
-    transform:translateY(-5px);
-
-    border-color:rgba(255,215,80,.20);
-
-    box-shadow:
-        0 20px 40px rgba(0,0,0,.35);
-}
-
-.feature-card:hover::before{
-
-    opacity:1;
-}
-
-.feature-icon{
-
-    width:52px;
-    height:52px;
-
-    border-radius:16px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:24px;
-
-    margin-bottom:16px;
-
-    background:linear-gradient(
-        180deg,
-        #FFD54A,
-        #D4AF37);
-
-    color:#111;
-
-    box-shadow:
-        0 10px 22px rgba(212,175,55,.25);
-}
-
-.feature-card h4{
-
-    margin:0 0 10px;
-
-    font-size:16px;
-
-    font-weight:800;
-
-    color:#fff;
-}
-
-.feature-card p{
-
-    margin:0;
-
-    font-size:13px;
-
-    line-height:1.7;
-
-    color:#AFAFAF;
-}
-
-/* ---------- HERO ANIMATION ---------- */
-
-.hero-badge{
-
-    animation:heroFloat 3s ease-in-out infinite;
-}
-
-@keyframes heroFloat{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-4px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-}
-
-.bonus-card{
-
-    animation:bonusCard 5s ease-in-out infinite;
-}
-
-@keyframes bonusCard{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-6px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-}
-
-/* ---------- PAGE ANIMATION ---------- */
+/* ==========================================================
+   PAGE ANIMATION
+========================================================== */
 
 .register-card{
 
@@ -3919,99 +3981,21 @@ a.club-banner-link{
     }
 }
 
-/* ---------- MOBILE ---------- */
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
 
 @media (max-width:768px){
 
-.premium-hero{
+    .premium-hero{
 
-    position:relative;
+        padding:36px 20px 48px;
+    }
 
-    overflow:hidden;
-
-    padding:36px 20px 48px;
-
-    background:
-        radial-gradient(circle at top right,
-        rgba(255,208,70,.18),
-        transparent 45%),
-
-        linear-gradient(
-            180deg,
-            #1b1a17 0%,
-            #161616 55%,
-            #151515 100%
-        );
-
-    border-radius:26px;
-
-    border:none;
-
-}
-
-.premium-form-section{
-
-    margin-top:-22px;
-
-    padding:0 18px 40px;
-
-    position:relative;
-
-    z-index:10;
-
-}
-
-.register-card{
-
-    border-radius:26px;
-
-    padding:24px;
-
-    background:#151515;
-
-    border:1px solid rgba(255,215,80,.08);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.40);
-
-}
-
-  .premium-hero-content{
-
-        flex-direction:row;
-
-        align-items:center;
-
-        justify-content:space-between;
+    .premium-hero-content{
 
         gap:16px;
-    }
-
-    .premium-left{
-
-        flex:1;
-    }
-
-    .premium-right{
-
-        flex:1;
-
-        display:flex;
-
-        justify-content:flex-end;
-
-        align-items:center;
-    }
-
-    .hero-image{
-
-        width:100%;
-
-        max-width:220px;
-
-        height:auto;
-
-        object-fit:contain;
     }
 
     .hero-title{
@@ -4024,54 +4008,27 @@ a.club-banner-link{
         font-size:14px;
     }
 
+    .hero-image{
+
+        max-width:220px;
+    }
+
     .premium-features{
 
         grid-template-columns:1fr;
     }
-
 }
 
 @media (max-width:480px){
 
-   .premium-hero{
+    .premium-hero{
 
-    border-radius:26px 26px 0 0;
-
-    overflow:hidden;
-
-    border:1px solid rgba(255,215,80,.08);
-
-    border-bottom:none;
-}
+        padding:30px 18px 44px;
+    }
 
     .premium-hero-content{
 
-        flex-direction:row;
-
-        align-items:center;
-
         gap:12px;
-    }
-
-    .premium-left{
-
-        flex:1;
-    }
-
-    .premium-right{
-
-        flex:1;
-
-        display:flex;
-
-        justify-content:flex-end;
-    }
-
-    .hero-image{
-
-        max-width:170px;
-
-        width:100%;
     }
 
     .hero-title{
@@ -4086,6 +4043,11 @@ a.club-banner-link{
         font-size:13px;
 
         line-height:1.6;
+    }
+
+    .hero-image{
+
+        max-width:170px;
     }
 
     .register-card{
@@ -4105,18 +4067,17 @@ a.club-banner-link{
         font-size:13px;
     }
 
-    .premium-register-btn{
-
-        height:54px;
-    }
-
+    .premium-register-btn,
     .premium-login-btn{
 
         height:54px;
     }
-
 }
-/* ---------- SCROLLBAR ---------- */
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
 
 ::-webkit-scrollbar{
 
