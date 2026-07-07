@@ -119,65 +119,29 @@ export default function RegisterForm() {
 
       <section className="premium-hero">        <div className="premium-hero-content">
 
-          <div className="premium-left">
+           <div className="premium-left">
 
-            <span className="hero-badge">
-              🎁 WELCOME BONUS
-            </span>
+  <h1 className="hero-title">
+    Create Your
+    <br />
+    Account
+  </h1>
 
-            <h1 className="hero-title">
-              Create Your Account
-            </h1>
+  <p className="hero-subtitle">
+    Create your account by phone number or email
+  </p>
 
-            <p className="hero-subtitle">
-              Join thousands of players and enjoy a secure,
-              fast and premium gaming experience.
-            </p>
+</div>
 
-            <div className="hero-features">
+<div className="premium-right">
 
-              <div className="hero-feature">
-                🛡
-                <span>100% Secure</span>
-              </div>
+  <img
+    src="/images/register-hero.png"
+    alt="Lucky Nova Bonus"
+    className="hero-image"
+  />
 
-              <div className="hero-feature">
-                ⚡
-                <span>Instant Access</span>
-              </div>
-
-              <div className="hero-feature">
-                🎁
-                <span>Daily Rewards</span>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div className="premium-right">
-
-            <div className="bonus-card">
-
-              <div className="bonus-glow"></div>
-
-              <div className="bonus-icon">
-                🎁
-              </div>
-
-              <div className="bonus-small">
-                WELCOME BONUS
-              </div>
-
-              <div className="bonus-price">
-                ₹10,000
-              </div>
-
-              <div className="bonus-text">
-                Register today and unlock exclusive
-                rewards with your first account.
-              </div>
-
+</div>
             </div>
 
           </div>
