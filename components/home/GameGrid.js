@@ -201,17 +201,19 @@ function PopularGameCard({ game, onComingSoon }) {
     .filter(Boolean)
     .join(" ");
 
-  const body = (
+ const body = (
+  <>
     <div className="club-popular-card-media">
       <GameBadge game={game} />
       <GameCardArt game={game} />
-      <div className="club-popular-card-meta">
-        <strong>{game.label}</strong>
-        <span>{game.category}</span>
-      </div>
     </div>
-  );
 
+    <div className="club-popular-card-info">
+      <strong>{game.label}</strong>
+      <span>{game.category}</span>
+    </div>
+  </>
+);
   if (game.comingSoon) {
     return (
       <button type="button" className={cardClass} onClick={() => onComingSoon(game)}>
