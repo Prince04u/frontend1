@@ -1116,10 +1116,12 @@ a.club-banner-link{
 }
 
 .club-category-icon{
-
-    font-size:24px;
-
-    line-height:1;
+    width:24px;
+    height:24px;
+    object-fit:contain;
+    display:block;
+    user-select:none;
+    pointer-events:none;
 }
 
 .club-category-label{
