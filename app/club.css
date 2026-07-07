@@ -2229,19 +2229,19 @@ a.club-banner-link{
 
     color:#D8D8D8;
 }
-/* ===========================
-   HERO LAYOUT
-=========================== */
+/* ==========================
+   PREMIUM HERO LAYOUT
+========================== */
 
 .auth-banner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:22px;
+    position:relative;
+
+    display:block;
+
+    padding:34px 22px 26px;
 }
 
 .auth-banner-content{
-    flex:1;
     position:relative;
     z-index:5;
 }
@@ -2251,7 +2251,7 @@ a.club-banner-link{
     align-items:center;
     justify-content:center;
 
-    padding:8px 16px;
+    padding:8px 18px;
 
     border-radius:999px;
 
@@ -2266,19 +2266,24 @@ a.club-banner-link{
     letter-spacing:1px;
 
     margin-bottom:18px;
+
+    box-shadow:0 8px 20px rgba(212,175,55,.25);
 }
 
 .hero-stats{
-    display:flex;
-    gap:12px;
-    margin-top:26px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:10px;
+
+    margin-top:24px;
 }
 
 .hero-stat{
 
-    flex:1;
-
-    padding:12px;
+    padding:12px 6px;
 
     border-radius:16px;
 
@@ -2295,38 +2300,40 @@ a.club-banner-link{
 
     display:block;
 
-    font-size:18px;
+    font-size:17px;
+
+    font-weight:800;
 
     color:#FFD54A;
+
+    margin-bottom:4px;
 }
 
 .hero-stat span{
 
     font-size:11px;
 
-    color:#BEBEBE;
+    color:#AFAFAF;
 }
+
+/* Bonus Card */
 
 .hero-card{
 
-    width:180px;
+    margin-top:24px;
+
+    width:100%;
+
+    border-radius:20px;
 
     padding:22px;
 
-    border-radius:22px;
+    background:linear-gradient(180deg,#1D1D1D,#121212);
 
-    background:linear-gradient(180deg,#232323,#141414);
-
-    border:1px solid rgba(255,215,80,.15);
+    border:1px solid rgba(255,215,80,.12);
 
     box-shadow:
-        0 20px 45px rgba(0,0,0,.35);
-
-    text-align:center;
-
-    position:relative;
-
-    z-index:5;
+        0 15px 40px rgba(0,0,0,.35);
 }
 
 .hero-card-top{
@@ -2338,9 +2345,9 @@ a.club-banner-link{
 
 .hero-card-title{
 
-    color:#BFBFBF;
-
     font-size:13px;
+
+    color:#BFBFBF;
 }
 
 .hero-card-amount{
@@ -2356,11 +2363,11 @@ a.club-banner-link{
 
 .hero-card-text{
 
+    color:#A5A5A5;
+
     font-size:12px;
 
-    color:#9F9F9F;
-
-    line-height:1.6;
+    line-height:1.7;
 }
 .auth-body{
 
